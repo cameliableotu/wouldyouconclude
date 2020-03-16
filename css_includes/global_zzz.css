@@ -1,0 +1,46 @@
+body {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    background-color: #FFFFCC;
+    margin-left: 0;
+    margin-top: 5em;
+}
+
+li.QuestionAlt-scale-box {
+    width: auto;
+    height: auto;
+    display: table;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.message {
+     font-family: Helvetica, sans-serif;
+     font-size: 18px;
+     background-color: #FFFFCC;
+     color: black;
+     clear: both;
+}
+
+.EPDashedSentence-sentence {
+     font-family: courier, serif;
+     font-size: 32px;
+     font-weight: bold;
+     background-color: #FFFFCC;
+     color: black;
+     clear: both;
+}
+
+.Separator-next-item-failure-message {
+    color: red;
+}
+
+.Separator-next-item-message {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+}
+
+
