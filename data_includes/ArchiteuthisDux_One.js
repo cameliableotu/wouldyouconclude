@@ -107,6 +107,7 @@ var items = [
 
 //// Shared experimental items + fillers
 //// ARCHITEUTHIS:[["ARCHITEUTHIS-matchheadsg",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cartea de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
+[["ARCHITEUTHIS-sgmatch",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă femeie mereu ",as: [['s','au'],['k','are']]}],
 [["ARCHITEUTHIS-sgmismatch",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă femei mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-plmatch",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă femei mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-plmismatch",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cărţile de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
