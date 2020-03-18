@@ -3,6 +3,7 @@
 // 2AFC verb / pronoun continuation task
 
 // Do show progress bar (fine! I give in)
+Debug()
 var showProgressBar = true;
 
 // Main shuffleSequence definition
