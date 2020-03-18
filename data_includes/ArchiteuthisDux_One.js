@@ -20,9 +20,9 @@ var shuffleSequence = seq(
 var DS = 'EPDashedAcceptabilityJudgment';
 
 //  Set the Prolific Academic Completion URL
-var sendingResultsMessage = "Please wait. Your data are being sent to the server."; 
-var completionMessage = "Thank you for your participation. Your completion code is ASRJCD6V. To complete this experiment, go to: https://app.prolific.ac/submissions/complete?cc=ASRJCD6V."; 
-var completionErrorMessage = "There was an error in sending your data to the server. You may still complete this experiment. Your completion code is ASRJCD6V. Please go to: https://app.prolific.ac/submissions/complete?cc=ASRJCD6V."; 
+var sendingResultsMessage = "Vă rugăm să aşteptaţi. Răspunsurile dumneavoastră se trimit serverului."; 
+var completionMessage = "Mulţumim pentru participare!"; 
+var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastră către server."; 
 
 // Controller settings.
 // Parameter settings taken from Staub 2009
@@ -57,11 +57,11 @@ function modifyRunningOrder(ro)
         {
             ro[i].push(new DynamicElement(
                 "Message",
-                {html: "<p>Please take a short break. Press a button to continue when you're ready.</p>", transfer: "keypress"},
+                {html: "<p> Vă rugăm să luaţi o mică pauză. Apăsaţi orice tastă când sunteţi gata să începeţi din nou.</p>", transfer: "keypress"},
             true));
             ro[i].push(new DynamicElement(
                 "Separator",
-                {transfer: 2500, normalMessage: "Hands in place! Your first sentence of this block will start soon."},
+                {transfer: 2500, normalMessage: "Atenţie! Primul fragment de propoziţie din acest set va apărea pe ecran în curând."},
             true));
         }
     }
@@ -83,26 +83,26 @@ var items = [
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Let's try one practice item."]
+                           ["p", "Hai să exersăm un pic înainte de a începe efectiv."]
                          ]}],
 
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"The cute cats",as: [['s','are'],['k','is']]}],
+['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"Pisicuţele tigrate",as: [['s','sunt'],['k','este']]}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "How was that? Just try and pick whichever word seems to fit better as the next word of the sentence.  "],
-                           ["p", "Many English speakers find 'are' to be a more natural completion. Let's try some more."]
+                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi varianta care vi se pare o continuare mai bună a propoziţiei."],
+                           ["p", "Multor vorbitori nativi de limba română li se pare că 'sunt' este o continuare mai firească a fragmentului anterior. Hai să mai exersăm un pic."],
                          ]}],
 
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"The young man behaved",as: [['s','themselves'],['k','himself']]}],
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"Mary and John",as: [['s','are'],['k','is']]}],
+['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"Zambila roz",as: [['s','miros'],['k','miroase']]}],
+['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: ""}, "EPDashedSentence", {s:"+"}, DS, {s:"Maria şi Ion",as: [['s','sunt'],['k','este']]}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Alright, that's it for practice! Hit any key when you're ready to begin."]
+                           ["p", "Bun, gata cu exersatul! Apăsaţi orice tastă când sunteţi gata să începeţi."]
                         ]}],
 
-['shared-intro',"Separator",{transfer: 2500, normalMessage: "Hands in place! Your first sentence of this block will start soon."}],
+['shared-intro',"Separator",{transfer: 2500, normalMessage: "Atenţie! Primul fragment de propoziţie din acest set va apărea pe ecran în curând."}],
 
 
 //// Shared experimental items + fillers
