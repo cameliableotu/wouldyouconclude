@@ -110,8 +110,7 @@ var items = [
 [["ARCHITEUTHIS-matchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă femei mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-mismatchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cărţile de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-matchheadsg",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă cântăreaţă mereu ",as: [['s','au'],['k','are']]}], 
-[["ARCHITEUTHIS-mismatchheadsg",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă cântăreţe
-mereu ",as: [['s','au'],['k','are']]}], 
+[["ARCHITEUTHIS-mismatchheadsg",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă cântăreţe mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-matchheadpl",2], "EPDashedSentence", {s:"+"}, DS, {s:"Viorile de lângă cântăreţe mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-mismatchheadpl",2], "EPDashedSentence", {s:"+"}, DS, {s:" Viorile de lângă  cântăreaţă mereu ",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-matchheadsg",3], "EPDashedSentence", {s:"+"}, DS, {s:"Rochia de lângă croitoreasă uneori",as: [['s','au'],['k','are']]}], 
