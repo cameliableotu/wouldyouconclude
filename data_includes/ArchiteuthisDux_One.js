@@ -287,7 +287,7 @@ var items = [
 ["filler-95", "EPDashedSentence", {s:"+"}, DS, {s:"Cursul masteral",as: [['s','cuprind'],['k','cuprinde']]}],
 ["filler-96", "EPDashedSentence", {s:"+"}, DS, {s:"Bagajul mare",as: [['s','conţin'],['k','conţine']]}]
 
-
+];
 
 
 
