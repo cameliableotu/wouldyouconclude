@@ -162,10 +162,10 @@ var items = [
 [["ARCHITEUTHIS-plmismatch",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureurile de lângă macrou mereu",as: [['s','au'],['k','are']]}],
 
 
-[["ARCHITEUTHIS-sgmatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismul de lângă microorganism mereu",as: [['s','au'],['k','are']]}], 
-[["ARCHITEUTHIS-sgmismatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismul de lângă microorganisme mereu",as: [['s','au'],['k','are']]}], 
-[["ARCHITEUTHIS-plmatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismele de lângă microorganisme mereu",as: [['s','au'],['k','are']]}], 
-[["ARCHITEUTHIS-plmismatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismele de lângă microorganism mereu",as: [['s','au'],['k','are']]}],
+[["ARCHITEUTHIS-sgmatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă trup mereu",as: [['s','au'],['k','are']]}], 
+[["ARCHITEUTHIS-sgmismatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă trupuri mereu",as: [['s','au'],['k','are']]}], 
+[["ARCHITEUTHIS-plmatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă trupuri mereu",as: [['s','au'],['k','are']]}], 
+[["ARCHITEUTHIS-plmismatch",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă trup mereu",as: [['s','au'],['k','are']]}],
 [["ARCHITEUTHIS-sgmatch",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă nevertebrat uneori",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-sgmismatch",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă nevertebrate uneori",as: [['s','au'],['k','are']]}], 
 [["ARCHITEUTHIS-plmatch",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferele de lângă nevertebrate uneori",as: [['s','au'],['k','are']]}], 
