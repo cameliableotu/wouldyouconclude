@@ -159,10 +159,10 @@ var items = [
 [["ATTRAGREEROMANIAN-mismatchheadpl",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureurile de lângă macrou mereu",as: [['s','au'],['k','are']]}],
 
 
-[["ATTRAGREEROMANIAN-matchheadsg",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismul de lângă microorganism mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismul de lângă microorganisme mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismele de lângă microorganisme mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",13], "EPDashedSentence", {s:"+"}, DS, {s:"Organismele de lângă microorganism mereu",as: [['s','au'],['k','are']]}],
+[["ATTRAGREEROMANIAN-matchheadsg",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă trup mereu",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă trupuri mereu",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadpl",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă trupuri mereu",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadpl",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă trup mereu",as: [['s','au'],['k','are']]}],
 [["ATTRAGREEROMANIAN-matchheadsg",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă nevertebrat uneori",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă nevertebrate uneori",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferele de lângă nevertebrate uneori",as: [['s','au'],['k','are']]}], 
