@@ -126,7 +126,7 @@ var items = [
 [["ATTRAGREEROMANIAN-mismatchheadpl",4], "EPDashedSentence", {s:"+"}, DS, {s:"Dulceţurile de lângă  gospodină uneori ",as: [['s','au'],['k','are']]}], 
 
 
- [["ATTRAGREEROMANIAN-matchheadsg",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica de lângă fată mereu",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadsg",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica de lângă fată mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica de lângă fete mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisicile de lângă fete mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadpl",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisicile de lângă fată mereu ",as: [['s','au'],['k','are']]}], 
@@ -267,9 +267,9 @@ var items = [
 [["filler-semanticchoice",71], "EPDashedSentence", {s:"+"}, DS, {s:"Florile de lângă sticlele albastre",as: [['s','se ofilesc'],['k','se sparg']]}],
 [["filler-semanticchoice",72], "EPDashedSentence", {s:"+"}, DS, {s:"Calculatoarele de lângă copiii năzdrăvani",as: [['s','se strică'],['k','se joacă']]}],
 [["filler-onenounplagreement",73], "EPDashedSentence", {s:"+"}, DS, {s:"Iepuraşii fricoşi",as: [['s','se ascund'],['k','se ascunde']]}],
-[["filler-onenounplagreement",74], {s:"+"}, DS, {s:"Cutremurele mari",as: [['s','distrug'],['k','distruge']]}],
-[["filler-onenounplagreement",75], {s:"+"}, DS, {s:"Grădinile japoneze",as: [['s','au'],['k','are']]}],
-[["filler-onenounplagreement",76], {s:"+"}, DS, {s:"Fetele seducătoare",as: [['s','atrag'],['k','atrage']]}],
+[["filler-onenounplagreement",74], "EPDashedSentence",{s:"+"}, DS, {s:"Cutremurele mari",as: [['s','distrug'],['k','distruge']]}],
+[["filler-onenounplagreement",75], "EPDashedSentence",{s:"+"}, DS, {s:"Grădinile japoneze",as: [['s','au'],['k','are']]}],
+[["filler-onenounplagreement",76], "EPDashedSentence",{s:"+"}, DS, {s:"Fetele seducătoare",as: [['s','atrag'],['k','atrage']]}],
 [["filler-onenounplagreement",77], "EPDashedSentence", {s:"+"}, DS, {s:"Muzicienii creativi ",as: [['s','compun'],['k','compune']]}],
 [["filler-onenounplagreement",78], "EPDashedSentence", {s:"+"}, DS, {s:"Rănile sufleteşti ",as: [['s','dor'],['k','doare']]}],
 [["filler-onenounplagreement",79], "EPDashedSentence", {s:"+"}, DS, {s:"Paharele colorate",as: [['s','conţin'],['k','conţine']]}],
