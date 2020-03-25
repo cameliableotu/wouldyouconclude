@@ -203,7 +203,7 @@ var items = [
 [["ATTRAGREEROMANIAN-matchheadsg",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buşteanul de lângă erou mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buşteanul de lângă eroi mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buştenii de lângă eroi mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",23], "EPDashedSentence", {s:"+"}, DS, {s:"Buştenii de lângă erou mereu ",as: [['s','au'],['k','are']]}],
+[["ATTRAGREEROMANIAN-mismatchheadpl",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buştenii de lângă erou mereu ",as: [['s','au'],['k','are']]}],
 [["ATTRAGREEROMANIAN-matchheadsg",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturele de lângă croitor adesea",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturele de lângă croitori adesea",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă croitori adesea",as: [['s','au'],['k','are']]}], 
