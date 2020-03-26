@@ -207,8 +207,8 @@ var items = [
 [["ATTRAGREEROMANIAN-mismatchheadpl",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă croitor adesea",as: [['s','au'],['k','are']]}],
 [["ATTRAGREEROMANIAN-matchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabil uneori",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabili uneori",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabili adesea",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabil adesea",as: [['s','au'],['k','are']]}],
+[["ATTRAGREEROMANIAN-matchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabili uneori",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabil uneori",as: [['s','au'],['k','are']]}],
 
 
 
