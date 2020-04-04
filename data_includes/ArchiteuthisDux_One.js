@@ -92,7 +92,7 @@ var items = [
                            ["p", "Multor vorbitori nativi de limba română li se pare că 'sunt' este o continuare mai firească a fragmentului anterior. Hai să mai exersăm un pic."],
                          ]}],
 
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}, "EPDashedSentence", {s:"+"}, DS, {s:"Zambila roz",as: [['s','miros'],['k','miroase']]}],
+['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Zambila roz",as: [['s','miros'],['k','miroase']]}, Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 ['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Maria şi Ion",as: [['s','sunt'],['k','este']]}, Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ['shared-intro', Message, {consentRequired: false,
