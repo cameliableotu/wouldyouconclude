@@ -25,11 +25,7 @@ var defaults = [
         ignoreFailure: false, 
         errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid!",
         normalMessage: " "
-    },
-    ds,{
-        mode: "speeded acceptibility",
-        display: "in place"
-    },
+    }
 ];
 var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastră către server."; 
 
