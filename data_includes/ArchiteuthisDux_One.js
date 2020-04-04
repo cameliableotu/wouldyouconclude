@@ -41,8 +41,7 @@ var defaults = [
         wordPauseTime: 150,
         timeout: 4000,
         hasCorrect: false,
-        q: 'Which is corect?',
-        as: [['s','Sg'],['j','k']]'}
+        q: ''}
 ];
 
 // Add breaks every 24 items
