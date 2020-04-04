@@ -69,7 +69,7 @@ function modifyRunningOrder(ro)
 
 // Items array.
 var items = [
-["timeoutSep", Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
+["timeoutSep", Separator, { transfer: 2500, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ["consent", "Form", {consentRequired: true, html: {include: "consent.html"}}],
  ["setcounter", "__SetCounter__", { }],
