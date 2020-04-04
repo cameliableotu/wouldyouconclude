@@ -40,7 +40,7 @@ var defaults = [
         blankText: '+',
         wordTime: 250,
         wordPauseTime: 150,
-        timeout: 3000,
+        timeout: 4000,
         hasCorrect: false,
         q: ''}
 ];
