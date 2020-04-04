@@ -42,7 +42,7 @@ var defaults = [
         wordPauseTime: 150,
         timeout: 4000,
         hasCorrect: false,
-        q: '', as [['s','pl'],['k','sg']]}
+        q: 'What is the continuation?', as [['s','pl'],['k','sg']]}
 ];
 
 // Add breaks every 24 items
