@@ -19,14 +19,8 @@ var DS = 'EPDashedAcceptabilityJudgment';
 
 //  Set the Prolific Academic Completion URL
 var sendingResultsMessage = "Vă rugăm să aşteptaţi. Răspunsurile dumneavoastră se trimit serverului."; 
-var completionMessage = "Mulţumim pentru participare!"; 
-var defaults = [
-    Separator,{
-        ignoreFailure: false, 
-        errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid!",
-        normalMessage: " "
-    }
-];
+var completionMessage = "Mulţumim pentru participare!"
+;
 var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastră către server."; 
 
 // Controller settings.
