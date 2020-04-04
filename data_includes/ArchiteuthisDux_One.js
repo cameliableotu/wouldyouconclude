@@ -41,7 +41,8 @@ var defaults = [
         wordPauseTime: 150,
         timeout: 4000,
         hasCorrect: false,
-        q: ''}
+        q: 'Which is corect?',
+        as: [['s','Sg'],['j','k']]'}
 ];
 
 // Add breaks every 24 items
@@ -68,7 +69,7 @@ function modifyRunningOrder(ro)
 
 // Items array.
 var items = [
-["timeoutSep", Separator, { transfer: 1000, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
+["timeoutSep", Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ["consent", "Form", {consentRequired: true, html: {include: "consent.html"}}],
  ["setcounter", "__SetCounter__", { }],
