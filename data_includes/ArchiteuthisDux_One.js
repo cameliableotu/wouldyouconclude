@@ -88,7 +88,7 @@ var items = [
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi varianta care vi se pare o continuare mai bună a propoziţiei."],
+                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi rapid varianta care vi se pare o continuare mai bună a propoziţiei."],
                            ["p", "Multor vorbitori nativi de limba română li se pare că 'sunt' este o continuare mai firească a fragmentului anterior. Hai să mai exersăm un pic."],
                          ]}],
 
