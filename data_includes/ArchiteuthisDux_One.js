@@ -41,7 +41,7 @@ var defaults = [
         wordTime: 250,
         wordPauseTime: 150,
         timeout: 4000,
-        hasCorrect: false,
+                
         q: 'What is the continuation?', as [['s','pl'],['k','sg']]}
 ];
 
