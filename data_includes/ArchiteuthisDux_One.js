@@ -42,7 +42,7 @@ var defaults = [
         wordPauseTime: 150,
         timeout: 4000,
         hasCorrect: false,
-        q: ''}
+        q: '', as [['s','pl'],['k','sg']]}
 ];
 
 // Add breaks every 24 items
