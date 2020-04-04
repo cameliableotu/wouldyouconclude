@@ -84,7 +84,7 @@ var items = [
                    html: ["div",
                            ["p", "Hai să exersăm un pic înainte de a începe efectiv."]
                          ]}],
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}, "EPDashedSentence", {s:"+"}, DS, {s:"Pisicuţele tigrate",as: [['s','sunt'],['k','este']]}],
+['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Pisicuţele tigrate",as: [['s','sunt'],['k','este']]}, Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
@@ -93,7 +93,7 @@ var items = [
                          ]}],
 
 ['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}, "EPDashedSentence", {s:"+"}, DS, {s:"Zambila roz",as: [['s','miros'],['k','miroase']]}],
-['shared-intro', Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}, "EPDashedSentence", {s:"+"}, DS, {s:"Maria şi Ion",as: [['s','sunt'],['k','este']]}],
+['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Maria şi Ion",as: [['s','sunt'],['k','este']]}, Separator, { transfer: 250, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
