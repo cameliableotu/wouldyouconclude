@@ -26,7 +26,7 @@ var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastr�
 // Controller settings.
 // Parameter settings taken from Staub 2009
 var defaults = [
-    "EPDashedSentence", {
+     "EPDashedSentence", {
         mode: 'speeded acceptability',
         display: 'in place',
         blankText: '+',
@@ -41,8 +41,8 @@ var defaults = [
         wordTime: 250,
         wordPauseTime: 150,
         timeout: 4000,
-         hascorrect: false,      
-        q: ' '
+        hasCorrect: false,
+        q: ''}
 ];
 
 // Add breaks every 24 items
