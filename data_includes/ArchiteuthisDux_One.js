@@ -141,10 +141,10 @@ var items = [
 [["ATTRAGREEROMANIAN-mismatchheadpl",8], "EPDashedSentence", {s:"+"}, DS, {s:"Oile de lângă ţărancă mereu",as: [['s','au'],['k','are']]}],
 
 
-[["ATTRAGREEROMANIAN-matchheadsg",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă organism mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă organisme mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl",9], "EPDashedSentence", {s:"+"}, DS, {s:" Cuţitele de lângă organisme mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",9], "EPDashedSentence", {s:"+"}, DS, {s:" Cuţitele de lângă organism mereu",as: [['s','au'],['k','are']]}],
+[["ATTRAGREEROMANIAN-matchheadsg",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă organism uneori",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă organisme uneori",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadpl",9], "EPDashedSentence", {s:"+"}, DS, {s:" Cuţitele de lângă organisme uneori",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadpl",9], "EPDashedSentence", {s:"+"}, DS, {s:" Cuţitele de lângă organism uneori",as: [['s','au'],['k','are']]}],
 [["ATTRAGREEROMANIAN-matchheadsg",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tabloul de lângă animal mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tabloul de lângă animale mereu",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tablourile de lângă animale mereu",as: [['s','au'],['k','are']]}], 
@@ -205,10 +205,10 @@ var items = [
 [["ATTRAGREEROMANIAN-mismatchheadsg",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturele de lângă croitori adesea",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă croitori adesea",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadpl",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă croitor adesea",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-matchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabil uneori",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabili uneori",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabili uneori",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabil uneori",as: [['s','au'],['k','are']]}],
+[["ATTRAGREEROMANIAN-matchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabil adesea",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă contabili adesea",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabili adesea",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadpl",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă contabil adesea",as: [['s','au'],['k','are']]}],
 
 
 
