@@ -105,10 +105,14 @@ var items = [
 
 //// Shared experimental items + fillers
 //// 
-[["ATTRAGREEROMANIAN-matchheadsg",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă femei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă femei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cărţile de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg1",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg2",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg3M",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cartea de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg3F",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă ele mereu ",as: [['s','avem'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadpl1",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă noi mereu ",as: [['s','aveţi'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă voi mereu ",as: [['s','au'],['k','are']]}],[["ATTRAGREEROMANIAN-mismatchheadpl",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cărţile de lângă femeie mereu ",as: [['s','au'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-matchheadsg",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă ei mereu ",as: [['s','avem'],['k','are']]}], 
+[["ATTRAGREEROMANIAN-mismatchheadsg",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă ele mereu ",as: [['s','aveţi'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadsg",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă cântăreaţă mereu ",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-mismatchheadsg",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă cântăreţe mereu ",as: [['s','au'],['k','are']]}], 
 [["ATTRAGREEROMANIAN-matchheadpl",2], "EPDashedSentence", {s:"+"}, DS, {s:"Viorile de lângă cântăreţe mereu ",as: [['s','au'],['k','are']]}], 
