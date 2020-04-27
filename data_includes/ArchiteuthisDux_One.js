@@ -1,4 +1,4 @@
-// Agreement Attraction in Romanian (simple version without adjectives)
+// Person Attraction in Romanian (simple version without adjectives)
 // Do show progress bar (fine! I give in)
 
 var showProgressBar = true;
