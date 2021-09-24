@@ -1,4 +1,4 @@
-// Person Attraction in Romanian 
+// Pumpkin//experimentwithRodica
 // Do show progress bar (fine! I give in)
 
 var showProgressBar = true;
@@ -9,278 +9,188 @@ var shuffleSequence = seq(
     'setcounter',
     'intro',
     'shared-intro',
-    sepWith("timeoutSep",rshuffle(startsWith('ATTRAGREEROMANIAN'),startsWith('filler'))),
+    sepWith("sep", rshuffle(startsWith('SAD'),startsWith('filler'))),
     'debrief'
      );
 
-// Using modified controller coded by Ethan Poole (Umass, 2017)
-// Disallows use of mouse for responses.
-var DS = 'EPDashedAcceptabilityJudgment';
-
-//  Set the Prolific Academic Completion URL
 var sendingResultsMessage = "Vă rugăm să aşteptaţi. Răspunsurile dumneavoastră se trimit serverului."; 
-var completionMessage = "Mulţumim pentru participare!"
-;
+var completionMessage = "Mulţumim pentru participare!";
 var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastră către server."; 
 
 // Controller settings.
 // Parameter settings taken from Staub 2009
-var defaults = [
-     "EPDashedSentence", {
-        mode: 'speeded acceptability',
-        display: 'in place',
-        blankText: '+',
-        wordTime: 1000,
-        wordPauseTime: 150
-        },
-        DS, {randomOrder: false,
-        presentHorizontally: true,
-        mode: 'speeded acceptability',
-        display: 'in place',
-        blankText: '+',
-        wordTime: 250,
-        wordPauseTime: 150,
-        timeout: 3000,
-        hasCorrect: false,
-        q: ''}
-];
 
-// Add breaks every 24 items
-function modifyRunningOrder(ro)
-{
-    for (var i = 0; i < ro.length; ++i)
-    {
-        if (i % 24 == 1
-            && i > 23
-            && i < 250)
-        {
-            ro[i].push(new DynamicElement(
-                "Message",
-                {html: "<p> Vă rugăm să luaţi o mică pauză. Apăsaţi orice tastă când sunteţi gata să începeţi din nou.</p>", transfer: "keypress"},
-            true));
-            ro[i].push(new DynamicElement(
-                "Separator",
-                {transfer: 2500, normalMessage: "Atenţie! Primul fragment de propoziţie din acest set va apărea pe ecran în curând."},
-            true));
-        }
+var defaults = [
+    "Separator", {
+        transfer: 1000,                                      // How long between sentences? (ms)
+        normalMessage: " "  // What is message presented between stims? Can be blank.
+    },
+    "Question", {
+        hasCorrect: false
+    },
+    "Message", {
+        hideProgressBar: true
     }
-    return ro;
-}
+];
 
 // Items array.
 var items = [
-["timeoutSep", Separator, { transfer: 1500, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
 
 ["consent", "Form", {consentRequired: true, html: {include: "consent.html"}}],
- ["setcounter", "__SetCounter__", { }],
+  ["sep", "Separator", { }],
+    ["setcounter", "__SetCounter__", { }],
 ["intro", "Form", {consentRequired: true, html: {include: "intro.html"}}],
 ["debrief", "Form", {consentRequired: true, html: {include: "debrief.html"}}],
 
 ['shared-intro', "Form", {consentRequired: false, html: {include: "shared_intro1.html"}}],
-['shared-intro', "Form", {consentRequired: false, html: {include: "shared_intro2.html"}}],
-['shared-intro', "Form", {consentRequired: false, html: {include: "shared_intro3.html"}}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
                            ["p", "Hai să exersăm un pic înainte de a începe efectiv."]
                          ]}],
-['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Pisicuţele tigrate",as: [['s','sunt'],['k','este']]}, Separator, { transfer: 1500, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
+['shared-intro', "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Omul a căzut.", "Omul a minţit.",
+                                                                                                            "Ambele"]}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi rapid varianta care vi se pare o continuare mai bună a propoziţiei."],
-                           ["p", "Multor vorbitori nativi de limba română li se pare că 'sunt' este o continuare mai firească a fragmentului anterior. Hai să mai exersăm un pic."],
+                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi varianta/variantele care credeţi că poate fi continuată/pot fi continuate cu ‘intenţionat’."],
+                           ["p", "Unor vorbitori nativi de limba română li se pare că doar propoziţia 'Omul a minţit' poate fi continuată cu 'intenţionat’."],
+                           ["p", "Altor vorbitori li se pare că ambele propoziţii pot fi continuate cu ‘intenţionat’."],           
+                           ["p", "Hai să mai exersăm un pic."],
                          ]}],
-
-['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Zambila roz",as: [['s','miros'],['k','miroase']]}, Separator, { transfer: 1500, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
-['shared-intro', "EPDashedSentence", {s:"+"}, DS, {s:"Maria şi Ion",as: [['s','sunt'],['k','este']]}, Separator, { transfer: 1500, normalMessage: "", errorMessage: "Timed out. Vă rugăm să răspundeți mai rapid."}],
+['shared-intro', "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>?",as: ["Fata a rupt scaunul.", "Fata a murdărit scaunul.",
+                                                                                                            "Ambele"]}],
+['shared-intro', "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>?", as: ["Actorul a murit.", "Actorul a urlat.",
+                                                                                                            "Ambele"]}],
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
                            ["p", "Bun, gata cu exersatul! Apăsaţi orice tastă când sunteţi gata să începeţi."]
                         ]}],
+  
+// Shared experimental items + fillers
+  
 
-['shared-intro',"Separator",{transfer: 2500, normalMessage: "Atenţie! Primul fragment de propoziţie din acest set va apărea pe ecran în curând."}],
+[["SAD-cap",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la cap.", "Maria s-a cireşit pe cap.", "Ambele"]}],
+[["SAD-fata",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la faţă.", "Maria s-a cireşit pe faţă.", "Ambele"]}],
+[["SAD-maini",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la mȃini.", "Maria s-a cireşit pe mȃini.", "Ambele"]}],
+[["SAD-picioare",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la picioare.", "Maria s-a cireşit pe picioare.", "Ambele"]}],
+[["SAD-gat",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la gȃt.", "Maria s-a cireşit pe gȃt.", "Ambele"]}],
+[["SAD-gura",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la gură.", "Maria s-a cireşit pe gură.", "Ambele"]}],
+[["SAD-deget",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la deget.", "Maria s-a cireşit pe deget.", "Ambele"]}],
+[["SAD-spate",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la spate.", "Maria s-a cireşit pe spate.","Ambele"]}],
+[["SAD-burta",1], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Maria s-a cireşit la burtă.", "Maria s-a cireşit pe burtă.","Ambele"]}],
 
+ 
+[["SAD-cap",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la cap.", "Dumitru s-a piersicit pe cap.", "Ambele"]}],
+[["SAD-fata",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>?",as: ["Dumitru s-a piersicit la faţă.", "Dumitru s-a piersicit pe faţă.", "Ambele"]}],
+[["SAD-maini",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la mȃini.", "Dumitru s-a piersicit pe mȃini.", "Ambele"]}],
+[["SAD-picioare",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la picioare.", "Dumitru s-a piersicit pe picioare.","Ambele"]}],
+[["SAD-gat",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit  la gȃt.", "Dumitru s-a piersicit pe gȃt.","Ambele"]}],
+[["SAD-gura",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la gură.", "Dumitru s-a piersicit pe gură.","Ambele"]}],
+[["SAD-deget",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la deget.", "Dumitru s-a piersicit pe deget.","Ambele"]}],
+[["SAD-spate",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la spate.", "Dumitru s-a piersicit pe spate.", "Ambele"]}],
+[["SAD-burta",2], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dumitru s-a piersicit la burtă.", "Dumitru s-a piersicit pe burtă.","Ambele"]}],
 
-//// Shared experimental items + fillers
-[["ATTRAGREEROMANIAN-mismatchheadsg12",1], "EPDashedSentence", {s:"+"}, DS, {s:" Cartea de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cartea de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",1], "EPDashedSentence", {s:"+"}, DS, {s:"Cărţile de lângă ei mereu ",as: [['s','au'],['k','are']]}],     
-[["ATTRAGREEROMANIAN-mismatchheadsg12",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",2], "EPDashedSentence", {s:"+"}, DS, {s:"Vioara de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",2], "EPDashedSentence", {s:"+"}, DS, {s:"Viorile de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",2], "EPDashedSentence", {s:"+"}, DS, {s:"Viorile de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",3], "EPDashedSentence", {s:"+"}, DS, {s:"Rochia de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",3], "EPDashedSentence", {s:"+"}, DS, {s:"Rochia de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",3], "EPDashedSentence", {s:"+"}, DS, {s:"Rochiile de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",3], "EPDashedSentence", {s:"+"}, DS, {s:"Rochiile de lângă ei mereu ",as: [['s','au'],['k','are']]}],  
-[["ATTRAGREEROMANIAN-mismatchheadsg12",4], "EPDashedSentence", {s:"+"}, DS, {s:"Dulceaţa de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",4], "EPDashedSentence", {s:"+"}, DS, {s:"Dulceaţa de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",4], "EPDashedSentence", {s:"+"}, DS, {s:"Dulceţurile de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",4], "EPDashedSentence", {s:"+"}, DS, {s:"Dulceţurile de lângă ele mereu ",as: [['s','au'],['k','are']]}],
-    
- [["ATTRAGREEROMANIAN-mismatchheadsg12",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisicile de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",5], "EPDashedSentence", {s:"+"}, DS, {s:"Pisicile de lângă ei mereu ",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-mismatchheadsg12",6], "EPDashedSentence", {s:"+"}, DS, {s:"Învăţătoarea de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",6], "EPDashedSentence", {s:"+"}, DS, {s:"Învăţătoarea de lângă ele mereu ",as: [['s','au'],['k','are']]}],  
-[["ATTRAGREEROMANIAN-matchheadpl12",6], "EPDashedSentence", {s:"+"}, DS, {s:"Învăţătoarele de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",6], "EPDashedSentence", {s:"+"}, DS, {s:"Învăţătoarele de lângă ele mereu ",as: [['s','au'],['k','are']]}],    
+  
+[["SAD-cap",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la cap.", "Marina s-a zmeurit pe cap.", "Ambele"]}],
+[["SAD-fata",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la faţă.", "Marina s-a zmeurit pe faţă.", "Ambele"]}],
+[["SAD-maini",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la mȃini.", "Marina s-a zmeurit pe mȃini.","Ambele"]}],
+[["SAD-picioare",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la picioare.", "Marina s-a zmeurit pe picioare.","Ambele"]}],
+[["SAD-gat",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la gȃt.", "Marina s-a zmeurit pe gȃt.", "Ambele"]}],
+[["SAD-gura",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la gură.", "Marina s-a zmeurit pe gură.", "Ambele"]}],
+[["SAD-deget",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la deget.", "Marina s-a zmeurit pe deget.", "Ambele"]}],
+[["SAD-spate",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la spate.", "Marina s-a zmeurit pe spate.", "Ambele"]}],
+[["SAD-burta",3], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Marina s-a zmeurit la burtă.", "Marina s-a zmeurit pe burtă.", "Ambele"]}],     
 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",7], "EPDashedSentence", {s:"+"}, DS, {s:"Vânzătoarea de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",7], "EPDashedSentence", {s:"+"}, DS, {s:"Vânzătoarea de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",7], "EPDashedSentence", {s:"+"}, DS, {s:"Vânzătoarele de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",7], "EPDashedSentence", {s:"+"}, DS, {s:"Vânzătoarele de lângă ei mereu ",as: [['s','au'],['k','are']]}],     
-[["ATTRAGREEROMANIAN-mismatchheadsg12",8], "EPDashedSentence", {s:"+"}, DS, {s:"Oaia de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",8], "EPDashedSentence", {s:"+"}, DS, {s:"Oia de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",8], "EPDashedSentence", {s:"+"}, DS, {s:"Oile de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",8], "EPDashedSentence", {s:"+"}, DS, {s:"Oile de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitele de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",9], "EPDashedSentence", {s:"+"}, DS, {s:"Cuţitele de lângă ei mereu ",as: [['s','au'],['k','are']]}],  
-[["ATTRAGREEROMANIAN-mismatchheadsg12",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tabloul lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tabloul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tablourile de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",10], "EPDashedSentence", {s:"+"}, DS, {s:"Tablourile de lângă ele mereu ",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-mismatchheadsg12",11], "EPDashedSentence", {s:"+"}, DS, {s:"Nisipul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",11], "EPDashedSentence", {s:"+"}, DS, {s:"Nisipul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",11], "EPDashedSentence", {s:"+"}, DS, {s:"Nisipurile de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",11], "EPDashedSentence", {s:"+"}, DS, {s:"Nisipurile de lângă ei mereu ",as: [['s','au'],['k','are']]}],  
-[["ATTRAGREEROMANIAN-mismatchheadsg12",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureurile de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",12], "EPDashedSentence", {s:"+"}, DS, {s:"Piureurile de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",13], "EPDashedSentence", {s:"+"}, DS, {s:"Sufletele de lângă ei mereu ",as: [['s','au'],['k','are']]}],    
+  
+[["SAD-cap",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la cap.", "Daniel  s-a castraveţit pe cap.", "Ambele"]}],
+[["SAD-fata",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la faţă.", "Daniel  s-a castraveţit pe faţă.", "Ambele"]}],
+[["SAD-maini",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la mȃini.", "Daniel  s-a castraveţit pe mȃini.","Ambele"]}],
+[["SAD-picioare",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la picioare.", "Daniel  s-a castraveţit pe picioare.","Ambele"]}],
+[["SAD-gat",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la gȃt.", "Daniel  s-a castraveţit pe gȃt.", "Ambele"]}],
+[["SAD-gura",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la gură.", "Daniel  s-a castraveţit pe gură.","Ambele"]}],
+[["SAD-deget",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la deget.", "Daniel  s-a castraveţit pe deget.","Ambele"]}],
+[["SAD-spate",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la spate.", "Daniel  s-a castraveţit pe spate.","Ambele"]}],
+[["SAD-burta",4], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Daniel  s-a castraveţit la burtă.", "Daniel  s-a castraveţit pe burtă.","Ambele"]}],
+ 
+[["SAD-cap",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la cap.", "Laura s-a ciupercit pe cap.","Ambele"]}],
+[["SAD-fata",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la faţă.", "Laura s-a ciupercit pe faţă.", "Ambele"]}],
+[["SAD-maini",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la mȃini.", "Laura s-a ciupercit pe mȃini.", "Ambele"]}],
+[["SAD-picioare",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la picioare.", "Laura s-a ciupercit pe picioare.","Ambele"]}],
+[["SAD-gat",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la gȃt.", "Laura s-a ciupercit pe gȃt.", "Ambele"]}],
+[["SAD-gura",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la gură.", "Laura s-a ciupercit pe gură.", "Ambele"]}],
+[["SAD-deget",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la deget.", "Laura s-a ciupercit pe deget.", "Ambele"]}],
+[["SAD-spate",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la spate.", "Laura s-a ciupercit pe spate.","Ambele"]}],
+[["SAD-burta",5], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura s-a ciupercit la burtă.", "Laura s-a ciupercit pe burtă.", "Ambele"]}],
 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferele de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",14], "EPDashedSentence", {s:"+"}, DS, {s:"Mamiferele de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",15], "EPDashedSentence", {s:"+"}, DS, {s:"Macroul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",15], "EPDashedSentence", {s:"+"}, DS, {s:"Macroul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",15], "EPDashedSentence", {s:"+"}, DS, {s:"Macrourile de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",15], "EPDashedSentence", {s:"+"}, DS, {s:"Macrourile de lângă ei mereu ",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-mismatchheadsg12",16], "EPDashedSentence", {s:"+"}, DS, {s:"Animalul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",16], "EPDashedSentence", {s:"+"}, DS, {s:"Animalul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",16], "EPDashedSentence", {s:"+"}, DS, {s:"Animalele de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",16], "EPDashedSentence", {s:"+"}, DS, {s:"Animalele de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-
-[["ATTRAGREEROMANIAN-mismatchheadsg12",17], "EPDashedSentence", {s:"+"}, DS, {s:"Câinele de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",17], "EPDashedSentence", {s:"+"}, DS, {s:"Câinele de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",17], "EPDashedSentence", {s:"+"}, DS, {s:"Câinii de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",17], "EPDashedSentence", {s:"+"}, DS, {s:"Câinii de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",18], "EPDashedSentence", {s:"+"}, DS, {s:"Doctorul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",18], "EPDashedSentence", {s:"+"}, DS, {s:"Doctorul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",18], "EPDashedSentence", {s:"+"}, DS, {s:"Doctorii de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",18], "EPDashedSentence", {s:"+"}, DS, {s:"Doctorii de lângă ele mereu ",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-mismatchheadsg12",19], "EPDashedSentence", {s:"+"}, DS, {s:"Preotul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",19], "EPDashedSentence", {s:"+"}, DS, {s:"Preotul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",19], "EPDashedSentence", {s:"+"}, DS, {s:"Preoţii de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",19], "EPDashedSentence", {s:"+"}, DS, {s:"Preoţii de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",20], "EPDashedSentence", {s:"+"}, DS, {s:"Profesorul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",20], "EPDashedSentence", {s:"+"}, DS, {s:"Profesorul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",20], "EPDashedSentence", {s:"+"}, DS, {s:"Profesorii de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",20], "EPDashedSentence", {s:"+"}, DS, {s:"Profesorii de lângă ele mereu ",as: [['s','au'],['k','are']]}],
-[["ATTRAGREEROMANIAN-mismatchheadsg12",21], "EPDashedSentence", {s:"+"}, DS, {s:"Cârnatul de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",21], "EPDashedSentence", {s:"+"}, DS, {s:"Cârnatul de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",21], "EPDashedSentence", {s:"+"}, DS, {s:"Cârnaţii de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",21], "EPDashedSentence", {s:"+"}, DS, {s:"Cârnaţii de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buşteanul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buşteanul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buştenii de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",22], "EPDashedSentence", {s:"+"}, DS, {s:"Buştenii de lângă ele mereu",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturele de lângă noi mereu ",as: [['s','avem'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturele de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă noi mereu ",as: [['s','avem'],['k','au']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl3",23], "EPDashedSentence", {s:"+"}, DS, {s:"Nasturii de lângă ei mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg12",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă voi mereu ",as: [['s','aveţi'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-mismatchheadsg3",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacul de lângă ele mereu ",as: [['s','au'],['k','are']]}], 
-[["ATTRAGREEROMANIAN-matchheadpl12",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă voi mereu ",as: [['s','aveţi'],['k','au']]}],
-[["ATTRAGREEROMANIAN-matchheadpl3",24], "EPDashedSentence", {s:"+"}, DS, {s:"Sacii de lângă ele mereu",as: [['s','au'],['k','are']]}], 
-
-    //// Fillers
-[["filler-twonounspluralcorrectchoice",25], "EPDashedSentence", {s:"+"}, DS, {s:"Fata pe care domnii o",as: [['s','iubesc'],['k','iubeşte']]}],
-[["filler-twonounspluralcorrectchoice",26], "EPDashedSentence", {s:"+"}, DS, {s:"Cartea pe care fetele o",as: [['s','citesc'],['k','citeşte']]}],
-[["filler-twonounspluralcorrectchoice",27], "EPDashedSentence", {s:"+"}, DS, {s:"Pinguinul pe care copiii îl",as: [['s','privesc'],['k','priveşte']]}],
-[["filler-twonounspluralcorrectchoice",28], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica pe care băieţii o",as: [['s','lovesc'],['k','loveşte']]}],
-[["filler-twonounspluralcorrectchoice",29], "EPDashedSentence", {s:"+"}, DS, {s:"Veveriţa pe care bărbaţii o",as: [['s','prind'],['k','prinde']]}],
-[["filler-twonounspluralcorrectchoice",30], "EPDashedSentence", {s:"+"}, DS, {s:"Lumina pe care oamenii o",as: [['s','văd'],['k','vede']]}],
-[["filler-twonounspluralcorrectchoice",31], "EPDashedSentence", {s:"+"}, DS, {s:"Casa pe care contabilii o",as: [['s','construiesc'],['k','construieşte']]}],
-[["filler-twonounspluralcorrectchoice",32], "EPDashedSentence", {s:"+"}, DS, {s:"Mingea pe care sportivii o",as: [['s','aleg'],['k','alege']]}],
-[["filler-twonounspluralcorrectchoice",33], "EPDashedSentence", {s:"+"}, DS, {s:"Vinul pe care bucătarii îl",as: [['s','beau'],['k','bea']]}],
-[["filler-twonounspluralcorrectchoice",34], "EPDashedSentence", {s:"+"}, DS, {s:"Câinele pe care doctorii îl",as: [['s','hrănesc'],['k','hrăneşte']]}],
-[["filler-twonounspluralcorrectchoice",35],  "EPDashedSentence", {s:"+"}, DS, {s:"Poemul pe care tinerii îl",as: [['s','spun'],['k','spune']]}],
-[["filler-twonounspluralcorrectchoice",36], "EPDashedSentence", {s:"+"}, DS, {s:"Omul pe care animalele îl",as: [['s','îndrăgesc'],['k','îndrăgeşte']]}], 
-[["filler-twonounssingularcorrectchoice",37], "EPDashedSentence", {s:"+"}, DS, {s:"Vinurile pe care domnul le",as: [['s','iubesc'],['k','iubeşte']]}], 
-[["filler-twonounssingularcorrectchoice",38], "EPDashedSentence", {s:"+"}, DS, {s:"Scrisorile pe care fata le",as: [['s','citesc'],['k','citeşte']]}], 
-[["filler-twonounssingularcorrectchoice",39], "EPDashedSentence", {s:"+"}, DS, {s:"Girafele pe care copilul le",as: [['s','privesc'],['k','priveşte']]}], 
-[["filler-twonounssingularcorrectchoice",40], "EPDashedSentence", {s:"+"}, DS, {s:"Motanii pe care bunicul îi",as: [['s','adăpostesc'],['k','adăposteşte']]}], 
-[["filler-twonounssingularcorrectchoice",41], "EPDashedSentence", {s:"+"}, DS, {s:"Şerpii pe care bărbatul îi",as: [['s','strivesc'],['k','striveşte']]}], 
-[["filler-twonounssingularcorrectchoice",42], "EPDashedSentence", {s:"+"}, DS, {s:"Stelele pe care înţeleptul le",as: [['s','urmăresc'],['k','urmăreşte']]}], 
-[["filler-twonounssingularcorrectchoice",43], "EPDashedSentence", {s:"+"}, DS, {s:"Barurile pe care pictorul le",as: [['s','construiesc'],['k','construieşte']]}], 
-[["filler-twonounssingularcorrectchoice",44], "EPDashedSentence", {s:"+"}, DS, {s:"Păsările pe care colecţionarul le",as: [['s','văd'],['k','vede']]}], 
-[["filler-twonounssingularcorrectchoice",45], "EPDashedSentence", {s:"+"}, DS, {s:"Sucurile pe care chelnerul le",as: [['s','beau'],['k','bea']]}], 
-[["filler-twonounssingularcorrectchoice",46], "EPDashedSentence", {s:"+"}, DS, {s:"Pisicile pe care doamna le",as: [['s','îngrijesc'],['k','îngrijeşte']]}], 
-[["filler-twonounssingularcorrectchoice",47], "EPDashedSentence", {s:"+"}, DS, {s:"Cuvintele pe care preotul le",as: [['s','rostesc'],['k','rosteşte']]}], 
-[["filler-twonounssingularcorrectchoice",48], "EPDashedSentence", {s:"+"}, DS, {s:"Câinii pe care pisica îi",as: [['s','urăsc'],['k','urăşte']]}], 
-[["filler-coordination",49], "EPDashedSentence", {s:"+"}, DS, {s:"Femeia şi copilul",as: [['s','beau'],['k','bea']]}], 
-[["filler-coordination",50], "EPDashedSentence", {s:"+"}, DS, {s:"Doctorul şi bolnavul",as: [['s','plâng'],['k','plânge']]}],
-[["filler-coordination",51], "EPDashedSentence", {s:"+"}, DS, {s:"Vulpoiul şi vulpea",as: [['s','sar'],['k','sare']]}],
-[["filler-coordination",52], "EPDashedSentence", {s:"+"}, DS, {s:"Găina şi puiul",as: [['s','ciugulesc'],['k','ciuguleşte']]}],
-[["filler-coordination",53], "EPDashedSentence", {s:"+"}, DS, {s:"Paharul şi sticla",as: [['s','cad'],['k','cade']]}],
-[["filler-coordination",54], "EPDashedSentence", {s:"+"}, DS, {s:"Oboseala şi plictisul",as: [['s','ucid'],['k','ucide']]}],
-[["filler-coordination",55], "EPDashedSentence", {s:"+"}, DS, {s:"Iubirea şi prietenia",as: [['s','susţin'],['k','susţine']]}],
-[["filler-coordination",56], "EPDashedSentence", {s:"+"}, DS, {s:"Căţelul şi pisica",as: [['s','dorm'],['k','doarme']]}],
-[["filler-coordination",57], "EPDashedSentence", {s:"+"}, DS, {s:"Cafeaua şi ceaiul",as: [['s','au'],['k','are']]}],
-[["filler-coordination",58], "EPDashedSentence", {s:"+"}, DS, {s:"Trandafirul şi zambila",as: [['s','miros'],['k','miroase']]}],
-[["filler-coordination",59], "EPDashedSentence", {s:"+"}, DS, {s:"Cartea şi caietul",as: [['s','sunt'],['k','este']]}],
-[["filler-coordination",60], "EPDashedSentence", {s:"+"}, DS, {s:"Papagalul şi băiatul",as: [['s','vorbesc'],['k','vorbeşte']]}],
-[["filler-semanticchoice",61], "EPDashedSentence", {s:"+"}, DS, {s:"Lampa de lângă cartea verde ",as: [['s','se aprinde'],['k','se citeşte']]}],
-[["filler-semanticchoice",62], "EPDashedSentence", {s:"+"}, DS, {s:"Fetiţa de lângă camera albastră",as: [['s','dansează'],['k','luminează']]}],
-[["filler-semanticchoice",63], "EPDashedSentence", {s:"+"}, DS, {s:"Iepuraşul de lângă scaunul roşu ",as: [['s','doarme'],['k','se rupe']]}],
-[["filler-semanticchoice",64], "EPDashedSentence", {s:"+"}, DS, {s:"Pasărea de lângă masa neagră",as: [['s','cântă'],['k','se pliază']]}],
-[["filler-semanticchoice",65], "EPDashedSentence", {s:"+"}, DS, {s:"Măgarul de lângă căţelul maro",as: [['s','rage'],['k','latră']]}],
-[["filler-semanticchoice",66], "EPDashedSentence", {s:"+"}, DS, {s:"Papucii de lângă copiii bolnavi",as: [['s','alunecă'],['k','strănută']]}],
-[["filler-semanticchoice",67], "EPDashedSentence", {s:"+"}, DS, {s:"Hainele de lângă femeile zâmbăreţe",as: [['s','cad'],['k','vorbesc']]}],
-[["filler-semanticchoice",68], "EPDashedSentence", {s:"+"}, DS, {s:"Albinele de lângă portocalele stricate",as: [['s','bâzâie'],['k','miros']]}],
-[["filler-semanticchoice",69], "EPDashedSentence", {s:"+"}, DS, {s:"Râul de lângă pădurea frumoasă",as: [['s','curge'],['k','arde']]}],
-[["filler-semanticchoice",70], "EPDashedSentence", {s:"+"}, DS, {s:"Urşii de lângă prinţesele minunate ",as: [['s','hibernează'],['k','se căsătoresc']]}],
-[["filler-semanticchoice",71], "EPDashedSentence", {s:"+"}, DS, {s:"Florile de lângă sticlele albastre",as: [['s','se ofilesc'],['k','se sparg']]}],
-[["filler-semanticchoice",72], "EPDashedSentence", {s:"+"}, DS, {s:"Calculatoarele de lângă copiii năzdrăvani",as: [['s','se strică'],['k','se joacă']]}],
-[["filler-onenounplagreement",73], "EPDashedSentence", {s:"+"}, DS, {s:"Iepuraşii fricoşi",as: [['s','se ascund'],['k','se ascunde']]}],
-[["filler-onenounplagreement",74], "EPDashedSentence",{s:"+"}, DS, {s:"Cutremurele mari",as: [['s','distrug'],['k','distruge']]}],
-[["filler-onenounplagreement",75], "EPDashedSentence",{s:"+"}, DS, {s:"Grădinile japoneze",as: [['s','au'],['k','are']]}],
-[["filler-onenounplagreement",76], "EPDashedSentence",{s:"+"}, DS, {s:"Fetele seducătoare",as: [['s','atrag'],['k','atrage']]}],
-[["filler-onenounplagreement",77], "EPDashedSentence", {s:"+"}, DS, {s:"Muzicienii creativi ",as: [['s','compun'],['k','compune']]}],
-[["filler-onenounplagreement",78], "EPDashedSentence", {s:"+"}, DS, {s:"Rănile sufleteşti ",as: [['s','dor'],['k','doare']]}],
-[["filler-onenounplagreement",79], "EPDashedSentence", {s:"+"}, DS, {s:"Paharele colorate",as: [['s','conţin'],['k','conţine']]}],
-[["filler-onenounplagreement",80], "EPDashedSentence", {s:"+"}, DS, {s:"Hamsterii curioşi",as: [['s','apar'],['k','apare']]}],
-[["filler-onenounplagreement",81], "EPDashedSentence", {s:"+"}, DS, {s:"Elevii cuminţi",as: [['s','doresc'],['k','doreşte']]}],
-[["filler-onenounplagreement",82], "EPDashedSentence", {s:"+"}, DS, {s:"Parfumurile franţuzeşti",as: [['s','miros'],['k','miroase']]}],
-[["filler-onenounplagreement",83], "EPDashedSentence", {s:"+"}, DS, {s:"Bunicii iubitori",as: [['s','dau'],['k','dă']]}],
- [["filler-onenounplagreement",84], "EPDashedSentence", {s:"+"}, DS, {s:"Cheile verzi",as: [['s','deschid'],['k','deschide']]}],
-[["filler-onenounsgagreement",85], "EPDashedSentence", {s:"+"}, DS, {s:"Fata şatenă",as: [['s','se ascund'],['k','se ascunde']]}],
-[["filler-onenounsgagreement",86], "EPDashedSentence", {s:"+"}, DS, {s:"Pisica năzdrăvană",as: [['s','sparg'],['k','sparge']]}],
-[["filler-onenounsgagreement",87], "EPDashedSentence", {s:"+"}, DS, {s:"Caietul negru",as: [['s','au'],['k','are']]}],
-[["filler-onenounsgagreement",88], "EPDashedSentence", {s:"+"}, DS, {s:"Magnetul maro",as: [['s','atrag'],['k','atrage']]}],
-[["filler-onenounsgagreement",89], "EPDashedSentence", {s:"+"}, DS, {s:"Pixul albastru",as: [['s','scriu'],['k','scrie']]}],
-[["filler-onenounsgagreement",90], "EPDashedSentence", {s:"+"}, DS, {s:"Iepurele alb",as: [['s','sar'],['k','sare']]}],
-[["filler-onenounsgagreement",91], "EPDashedSentence", {s:"+"}, DS, {s:"Studentul harnic",as: [['s','muncesc'],['k','munceşte']]}],
-[["filler-onenounsgagreement",92], "EPDashedSentence", {s:"+"}, DS, {s:"Femeia misterioasă",as: [['s','dispar'],['k','dispare']]}],
-[["filler-onenounsgagreement",93], "EPDashedSentence", {s:"+"}, DS, {s:"Poetul talentat",as: [['s','vorbesc'],['k','vorbeşte']]}],
-[["filler-onenounsgagreement",94], "EPDashedSentence", {s:"+"}, DS, {s:"Mâncarea gustoasă",as: [['s','miros'],['k','miroase']]}],
-[["filler-onenounsgagreement",95], "EPDashedSentence", {s:"+"}, DS, {s:"Cursul masteral",as: [['s','cuprind'],['k','cuprinde']]}],
-[["filler-onenounsgagreement",96], "EPDashedSentence", {s:"+"}, DS, {s:"Bagajul mare",as: [['s','conţin'],['k','conţine']]}]
+  
+[["SAD-cap",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la cap.", "Matei s-a conopidit pe cap.", "Ambele"]}],
+[["SAD-fata",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la faţă.", "Matei s-a conopidit pe faţă.", "Ambele"]}],
+[["SAD-maini",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la mȃini.", "Matei s-a conopidit pe mȃini.", "Ambele"]}],
+[["SAD-picioare",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la picioare.", "Matei s-a conopidit pe picioare.","Ambele"]}],
+[["SAD-gura",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la gură.", "Matei s-a conopidit pe gură.","Ambele"]}],
+[["SAD-gat",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la gȃt.", "Matei s-a conopidit pe gȃt.","Ambele"]}],
+[["SAD-deget",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la deget.", "Matei s-a conopidit pe deget.","Ambele"]}],
+[["SAD-spate",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei s-a conopidit la spate.", "Matei s-a conopidit pe spate.","Ambele"]}],
+[["SAD-burta",6], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Matei  s-a conopidit la burtă.", "Matei s-a conopidit pe burtă.","Ambele"]}],
 
 
+  
+[["SAD-cap",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la cap.", "Elena s-a cartofit pe cap.", "Ambele"]}],
+[["SAD-fata",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la faţă.", "Elena s-a cartofit pe faţă.","Ambele"]}],
+[["SAD-maini",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la mȃini.", "Elena s-a cartofit pe mȃini.","Ambele"]}],
+[["SAD-picioare",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la picioare.", "Elena s-a cartofit pe picioare.","Ambele"]}],
+[["SAD-gat",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la gȃt.", "Elena s-a cartofit pe gȃt.","Ambele"]}],
+[["SAD-gura",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la gură.", "Elena s-a cartofit pe gură.", "Ambele"]}],
+[["SAD-deget",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la deget.", "Elena s-a cartofit pe deget.","Ambele"]}],
+[["SAD-spate",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la spate.", "Elena s-a cartofit pe spate.","Ambele"]}],
+[["SAD-burta",7], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Elena s-a cartofit la burtă.", "Elena s-a cartofit pe burtă.","Ambele"]}],
+
+
+[["SAD-cap",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la cap.", "Monica s-a pepenit pe cap.", "Ambele"]}],
+[["SAD-fata",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la faţă.", "Monica s-a pepenit pe faţă.", "Ambele"]}],
+[["SAD-maini",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la mȃini.", "Monica s-a pepenit pe mȃini.", "Ambele"]}],
+[["SAD-picioare",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la picioare.", "Monica s-a pepenit pe picioare.","Ambele"]}],
+[["SAD-gat",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la gȃt.", "Monica s-a pepenit pe gȃt.","Ambele"]}],
+[["SAD-gura",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la gură.", "Monica s-a pepenit pe gură.","Ambele"]}],
+[["SAD-deget",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la deget.", "Monica s-a pepenit pe deget.", "Ambele"]}],
+[["SAD-spate",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica s-a pepenit la spate.", "Monica s-a pepenit pe spate.","Ambele"]}],
+[["SAD-burta",8], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Monica  s-a pepenit la burtă.", "Monica s-a pepenit pe burtă.","Ambele"]}],
+ 
+  
+[["SAD-cap",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la cap.", "Alexandru s-a dovlecit pe cap.", "Ambele"]}],
+[["SAD-fata",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la faţă.", "Alexandru s-a dovlecit pe faţă.","Ambele"]}],
+[["SAD-maini",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la mȃini.", "Alexandru s-a dovlecit pe mȃini.","Ambele"]}],
+[["SAD-picioare",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la picioare.", "Alexandru s-a dovlecit pe picioare.","Ambele"]}],
+[["SAD-gat",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la gȃt.", "Alexandru s-a dovlecit pe gȃt.","Ambele"]}],
+[["SAD-gura",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la gură.", "Alexandru s-a dovlecit pe gură.","Ambele"]}],
+[["SAD-deget",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la deget.", "Alexandru s-a dovlecit pe deget.","Ambele"]}],
+[["SAD-spate",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la spate.", "Alexandru s-a dovlecit pe spate.", "Ambele"]}],
+[["SAD-burta",9], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alexandru s-a dovlecit la burtă.", "Alexandru s-a dovlecit pe burtă.", "Ambele"]}],
+
+
+
+
+  //// Fillers
+[["filler-activepassive",10], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Mirela a fost spănacită.", "Mirela a spănacit.", "Ambele"]}],
+[["filler-activepassive",11], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Mihai a fost caisit.", "Mihai a caisit.", "Ambele"]}],
+[["filler-activepassive",12], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Miriam a fost sălăţită.", "Miriam a sălăţit.", "Ambele"]}],
+[["filler-activepassive",13], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Tiberiu a fost ananasit.", "Tiberiu a ananasit.","Ambele"]}],
+[["filler-activepassive",14], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Lorena a fost ţelinită.", "Lorena a ţelinit.","Ambele"]}],
+[["filler-activepassive",15], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Andu a fost smochinit.", "Andu a smochinit.", "Ambele"]}],
+[["filler-activepassive",16], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Mihaela a fost gogoşărită.", "Mihaela a gogoşărit.", "Ambele"]}],                                                                                                                                                                                                                               
+[["filler-activepassive",17], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Silviu a fost nectarinit.", "Silviu a nectarinit.", "Ambele"]}],
+[["filler-activepassive",18], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Sofia a fost prunită.", "Sofia a prunit.", "Ambele"]}],
+  
+[["filler-animateinanimate",19], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Rodica a lămȃit.", "Copacul a lămȃit.", "Ambele"]}],
+[["filler-animateinanimate",20], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Luca a căpşunit.", "Tufa a căpşunit.", "Ambele"]}],
+[["filler-animateinanimate", 21], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Loredana a alunit.", "Arborele a alunit.", "Ambele"]}],
+[["filler-animateinanimate", 22], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Toma a strugurit.", "Via a strugurit.", "Ambele"]}],
+[["filler-animateinanimate", 23], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Cristina a corcoduşit.", "Ramura a corcoduşit.", "Ambele"]}],
+[["filler-animateinanimate", 24], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Dragoş a măzărit.", "Planta a măzărit.", "Ambele"]}],
+[["filler-animateinanimate", 25], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Alina a cepuit.", "Bulbul a cepuit.", "Ambele"]}],  
+[["filler-animateinanimate", 26], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Traian a ridichit.", "Pămȃntul a ridichit.", "Ambele"]}],
+[["filler-animateinanimate", 27], "Question", {q:"Care propoziţie poate fi continuată cu <i>‘intenţionat’</i>? ",as: ["Laura a măruit.", "Livada a măruit.", "Ambele"]}]
+ 
 ];
-
-
-
