@@ -1,85 +1,56 @@
 <table>
 <tr>
 <td colspan="2" style="width: 30em; padding-bottom: 1em;">
-<i> <p> Vă mulțumim că ați finalizat experimentul nostru! Aproape ați terminat! Înainte de final, vă rugăm să răspundeți la următoarele întrebări legate de experiment.</p>
+<i> Vă rugăm să completați acest scurt chestionar despre backgroundul dvs. lingvistic înainte de a începe experimentul. Vă rugăm să răspundeți la întrebări cu exactitate; răspunsurile dvs. nu vor afecta primirea sau nu a bonusului de data asta. </i>
 </td>
 </tr>
-
 <tr>
-  <td colspan="2">Să presupunem ca propoziția următoare înseamnă că Marina (sau o parte din Marina) a devenit ca o zmeură.
-
-                                                    "Marina s-a zmeurit."
-
-
-                  Puteți să spuneți în ce sens a devenit Marina ca o zmeură? (forma, culoare, textură, mărime, aromă, altele)
-
-                  Puteți să oferiți explicații adiționale. </td>
-  <td colspan="2">
-    <textarea name="debrief1" class="obligatory" rows="5" cols="40"></textarea>
-  </td>
+<td>Vă rugăm precizați sexul dvs.:</td><td><input name="gender" type="radio" value="feminin" class="obligatory" id="feminin" /><label for="female">Feminin</label>
+                   <input name="gender" type="radio" value="masculin" id="masculin"/><label for="masculin">Masculin</label>
+                   <input name="gender" type="radio" value="altul" id="other"/><label for="altul">Altul (opțiune ce poate fi specificată mai jos)</label>
 </tr>
-
-
 <tr>
-  <td colspan="2"> Să presupunem ca propoziția următoare înseamnă ca Matei (sau o parte din Matei) a devenit ca o conopidă.
-
-                                                    "Matei s-a conopidit."
-
-
-                  Puteți să spuneți în ce sens a devenit Matei ca o conopidă? (forma, culoare, textură, mărime, aromă, altele)
-
-                  Puteți să oferiți explicații adiționale. .</td>
+  <td colspan="2">Dacă sexul este "altul", menționați care este acesta în căsuţa alăturată:</td>
   <td colspan="2">
-    <textarea name="debrief2" class="obligatory" rows="5" cols="40"></textarea>
+    <textarea name="other" class="optional" rows="5" cols="40"></textarea>
   </td>
 </tr>
-  
-  <tr>
-  <td colspan="2"> Să presupunem ca propoziția următoare înseamnă ca Alexandru (sau o parte din Alexandru) a devenit ca un dovleac.
-
-                                                    "Alexandru s-a dovlecit."
-
-
-                  Puteți să spuneți în ce sens a devenit Alexandru ca un dovleac? (forma, culoare, textură, mărime, aromă, altele)
-
-                  Puteți să oferiți explicații adiționale. .</td>
-  <td colspan="2">
-    <textarea name="debrief2" class="obligatory" rows="5" cols="40"></textarea>
-  </td>
-</tr>
-
 <tr>
-  <td colspan="2"> Ați întâmpinat vreo problemă pe parcursul experimentului?</td>
+  <td colspan="2">Ce vârstă aveți?</td>
   <td colspan="2">
-    <textarea name="debrief3" class="obligatory" rows="5" cols="40"></textarea>
+    <textarea name="age" class="obligatory" rows="5" cols="40"></textarea>
   </td>
 </tr>
-
 <tr>
-  <td colspan="2"> Imaginați-vă cele mai frumoase peisaje pe care ați dori să le vedeți. Descrieți-le.</td>
+  <td colspan="2">Care este limba dvs. nativă (prima limbă pe care ați învăţat-o)?</td>
   <td colspan="2">
-    <textarea name="debrief3" class="obligatory" rows="5" cols="40"></textarea>
+    <textarea name="natlang" class="obligatory" rows="5" cols="40"></textarea>
   </td>
 </tr>
-
 <tr>
-  <td colspan="1">Ce tip de dispozitiv ai folosit pentru a completa chestionarul?</td>
-  <td colspan="1">
-    <select name="nLang" class="obligatory">
-      <option value="">--</option>
-      <option value="PC-Apple">PC, Apple OS</option>
-      <option value="PC-Linuz">PC, Unix/Linux OS</option>
-      <option value="PC-Windows">PC, Windows/Microsoft OS</option>
-      <option value="PC-Other">PC, Other OS</option>
-      <option value="Phone-Apple">Phone, Apple OS</option>
-      <option value="Phone-Linuz">Phone, Unix/Linux OS</option>
-      <option value="Phone-Windows">Phone, Windows/Microsoft OS</option>
-      <option value="Phone-Other">Phone, Other OS</option>
-      <option value="Tablet-Apple">Tablet, Apple OS</option>
-      <option value="Tablet-Linuz">Tablet, Unix/Linux OS</option>
-      <option value="Tablet-Windows">Tablet, Windows/Microsoft OS</option>
-      <option value="Tablet-Other">Tablet, Other OS</option>
-      <option value="Other">Other</option>
-    </select>
+  <td colspan="2">Unde aţi crescut (orașul, regiunea)?</td>
+  <td colspan="2">
+    <textarea name="state" class="obligatory" rows="5" cols="40"></textarea>
   </td>
 </tr>
+<tr>
+  <td colspan="2">Ce limbă vorbesc părinţii dvs.?</td>
+  <td colspan="2">
+    <textarea name="parentlang" class="obligatory" rows="5" cols="40"></textarea>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">Care este limba dvs. dominantă?</td>
+  <td colspan="2">
+    <textarea name="domlang" class="obligatory" rows="5" cols="40"></textarea>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">Vorbiţi alte limbi?</td>
+  <td colspan="2">
+    <textarea name="otherlang" class="obligatory" rows="5" cols="40"></textarea>
+  </td>
+</tr>
+<tr>
+
+</table>
