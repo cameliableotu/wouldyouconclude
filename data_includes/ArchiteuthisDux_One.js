@@ -34,7 +34,7 @@ var defaults = [
         presentAsScale: true,                               /// Should it be presented as a scale? 'true' or 'false'
         instructions: "Use number keys or click boxes to answer.",    /// Brief instructions present on each trial
         leftComment: "(Bad)", rightComment: "(Good)"        /// Labels on end-points of scale
-    }
+    },
     "Message", {
         hideProgressBar: true
     }
