@@ -149,36 +149,25 @@ var items = [
 
 
 //// Fillers
-[["filler-should",9],  "EPDashedSentence", {s:"+"},DS,  {s:"In 'Mary shouldn't be upset. Her father will give her a new car.', 'Mary shouldn't be upset.' means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]}],
-[["filler-should",10], "EPDashedSentence", {s:"+"}, DS, {s:"You shouldn't be annoyed. Your wife will cook dinner for you.', 'You shouldn't be annoyed.' means",as: [['s','It is necessary that you are not annoyed.'],['k','It is not necessary that you are annoyed.']]}],
-[["filler-should",11],  "EPDashedSentence", {s:"+"},DS, {s:"In 'Tim shouldn't cook rice. His girlfriend does not like it.', 'Tim shouldn't cook rice.' means",as: [['s','It is necessary that Tim does not cook rice.'],['k','It is not necessary that Tim cooks rice.']]}],
-[["filler-should",12],  "EPDashedSentence", {s:"+"},DS, {s:"In 'You shouldn't write the first draft yourself. Linda is the first author.', 'You shouldn't write the first draft yourself.' means",as: [['s','It is necessary that you do not write the first draft yourself.'],['k','It is not necessary that you write the first draft yourself.']]}],
-[["filler-need",13], "EPDashedSentence", {s:"+"},DS, {s:"In 'Tom needn't be offended. The woman didn't want to insult him at all.' means",as: [['s','It is necessary that Tom is not offended.'],['k','It is not necessary that Tom is offended.']]}],
-[["filler-need",14], "EPDashedSentence", {s:"+"},DS, {s:"+"}, DS, {s:"In 'You needn't be outraged. The professor is simply joking a bit.', 'You needn't be outraged.' means",as: [['s','It is necessary that you are not outraged.'],['k','It is not necessary that you are outraged.']]}],
-[["filler-need",15], "EPDashedSentence", {s:"+"},DS, {s:"In 'Sophie needn't tidy the room today. It still looks quite great.', 'Sophie needn't tidy the room today.' means",as: [['s','It is necessary that Sophie does not tidy the room.'],['k','It is not necessary that Sophie tidies the room.']]}],
-[["filler-need",16], "EPDashedSentence", {s:"+"},DS, {s:"In 'You needn't draw all the materials yourself. You can hire a designer', 'You needn't draw all the materials yourself.' means",as: [['s','It is necessary that you do not draw all the materials yourself.'],['k','It is not necessary that you draw all the materials yourself.']]}]
+[["filler-should",9],"Question", {s:"In <i>‘Mary shouldn't be upset. Her father will give her a new car.’</i>, <i>‘Mary shouldn't be upset.’</i> means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]},
+                     "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Mary shouldn't be upset.’</i> is in the context <i>‘Mary shouldn't be upset. Her father will give her a new car.’</i>?"}],          
+[["filler-should",10], "Question", {s:"In <i>‘You shouldn't be annoyed. Your wife will cook dinner for you.’</i>, <i>‘You shouldn't be annoyed.’</i> means",as: [['s','It is necessary that you are not annoyed.'],['k','It is not necessary that you are annoyed.']]},
+                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You shouldn't be annoyed.’</i> is in the context <i>‘You shouldn't be annoyed.Your wife will cook dinner for you.’</i>?"}],
+[["filler-should",11],  "Question", {s:"In <i>‘Tim shouldn't cook rice. His girlfriend does not like it.’</i>, <i>‘Tim shouldn't cook rice.’</i> means",as: [['s','It is necessary that Tim does not cook rice.'],['k','It is not necessary that Tim cooks rice.']]},
+                        "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tim shouldn't cook rice.’</i> is in the context <i>‘Tim shouldn't cook rice. His girlfriend does not like it.’</i>?"}],
+[["filler-should",12],  "Question", {s:"In  <i>‘You shouldn't write the first draft yourself. Linda is the first author.’</i>, 'You shouldn't write the first draft yourself.' means",as: [['s','It is necessary that you do not write the first draft yourself.'],['k','It is not necessary that you write the first draft yourself.']]},
+                        "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You shouldn't write the first draft yourself.’</i> is in the context <i>‘You shouldn't write the first draft yourself. Linda is the first author.’</i>?"}],
+[["filler-need",13], "Question", {s:"In  <i>‘Tom needn't be offended. The woman didn't want to insult him at all.’</i> means",as: [['s','It is necessary that Tom is not offended.'],['k','It is not necessary that Tom is offended.']]},
+                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tom needn't be offended.’</i> is in the context <i>‘Tom needn't be offended. The woman didn't want to insult him at all.’</i>?"}],
+[["filler-need",14], "Question", {s:"In  <i>‘You needn't be outraged. The professor is simply joking a bit.’</i>, <i>‘You needn't be outraged.’</i> means",as: [['s','It is necessary that you are not outraged.'],['k','It is not necessary that you are outraged.']]},
+                     "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tom needn't be offended.’</i> is in the context <i>‘Tom needn't be offended. The woman didn't want to insult him at all.’</i>?"}],
+[["filler-need",15], "Question", {s:"In  <i>‘Sophie needn't tidy the room today. It still looks quite great.’</i>, <i>‘Sophie needn't tidy the room today.’</i> means",as: [['s','It is necessary that Sophie does not tidy the room.'],['k','It is not necessary that Sophie tidies the room.']]},
+                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Sophie needn't tidy the room today.’</i> is in the context <i>‘Sophie needn't tidy the room today. It still looks quite great.’</i>?"}],
+[["filler-need",16], "Question", {s:"In <i>‘You needn't draw all the materials yourself. You can hire a designer.’</i>, <i>‘You needn't draw all the materials yourself.’</i> means",as: [['s','It is necessary that you do not draw all the materials yourself.'],['k','It is not necessary that you draw all the materials yourself.']]},
+                     "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tom needn't be offended.’</i> is in the context <i>‘Tom needn't be offended. The woman didn't want to insult him at all.’</i>?"}]
 
 ];
 
 
-[["filler-passive",10], "Question", {q:" Pentru propoziţia <i>‘Mirela a fost spănacită.’</i> ce interpretare aţi accepta? ", as: ["Mirela a devenit ca spanacul.", "Cineva i-a făcut ceva Mirelei cu spanacul.", "Ambele"]}],
-[["filler-passive",11], "Question", {q:" Pentru propoziţia <i>‘Mihai a fost caisit.’</i>  ce interpretare aţi accepta? ", as: ["Mihai a devenit ca o caisă.", "Cineva i-a făcut ceva lui Mihai cu o caisă.", "Ambele"]}],
-[["filler-passive",12], "Question", {q:" Pentru propoziţia <i>‘Miriam a fost sălăţită.’</i> ce interpretare aţi accepta? ", as: ["Miriam a devenit ca o salată.", "Cineva i-a făcut ceva lui Miriam cu o salată.", "Ambele"]}],
-[["filler-passive",13], "Question", {q:" Pentru propoziţia <i>‘Tiberiu a fost ananasit.’</i> ce interpretare aţi accepta? ", as: ["Tiberiu a devenit ca un ananas.", "Cineva i-a făcut ceva lui Tiberiu cu un ananas.", "Ambele"]}],
-[["filler-passive",14], "Question", {q:" Pentru propoziţia <i>‘Lorena a fost ţelinită.’</i> ce interpretare aţi accepta? ", as: ["Lorena a devenit ca o ţelină.", "Cineva i-a făcut ceva Lorenei cu o ţelină.", "Ambele"]}],
-[["filler-passive",15], "Question", {q:" Pentru propoziţia <i>‘Andu a fost smochinit.’</i> ce interpretare aţi accepta? ", as: ["Andu a devenit ca o smochină.", "Cineva i-a făcut ceva lui Andu cu o smochină.", "Ambele"]}],
-[["filler-passive",16], "Question", {q:" Pentru propoziţia <i>‘Mihaela a fost gogoşărită.’</i> ce interpretare aţi accepta? ", as: ["Mihaela a devenit ca un gogoşar.", "Cineva i-a făcut ceva Mihaelei cu un gogoşar.", "Ambele"]}],
-[["filler-passive",17], "Question", {q:" Pentru propoziţia <i>‘Silviu a fost nectarinit.’</i> ce interpretare aţi accepta? ", as: ["Silviu a devenit ca o nectarină.", "Cineva i-a făcut ceva lui Silviu cu o nectarină.", "Ambele"]}],
-[["filler-passive",18], "Question", {q:" Pentru propoziţia <i>‘Sofia a fost prunită.’</i> ce interpretare aţi accepta? ", as: ["Sofia a devenit ca o prună.", "Cineva i-a făcut ceva Sofiei cu o prună.", "Ambele"]}],
 
-[["filler-inanimate",19], "Question", {q:" Pentru propoziţia <i>‘Copacul a lămȃit.’</i> ce interpretare aţi accepta? ", as: ["Copacul a devenit plin cu lămȃi.", "Copacul a făcut ceva cu (nişte) lămȃi.", "Ambele"]}],
-[["filler-inanimate",20], "Question", {q:" Pentru propoziţia <i>‘Tufa a lămȃit.’</i> ce interpretare aţi accepta? ", as: ["Tufa a devenit plină cu lămȃi. ", "Tufa a făcut ceva cu (nişte) lămȃi.", "Ambele"]}],
-[["filler-inanimate",21], "Question", {q:" Pentru propoziţia <i>‘Arborele a alunit.’</i> ce interpretare aţi accepta? ", as: ["Arborele a devenit plin cu alune. ", "Arborele a făcut ceva cu (nişte) alune.", "Ambele"]}],
-[["filler-inanimate",22], "Question", {q:" Pentru propoziţia <i>‘Via a strugurit.’</i> ce interpretare aţi accepta? ", as: ["Via a devenit plină cu struguri. ", "Via a făcut ceva cu (nişte) struguri.", "Ambele"]}],
-[["filler-inanimate",23], "Question", {q:" Pentru propoziţia <i>‘ Ramura a corcoduşit.’</i> ce interpretare aţi accepta? ", as: ["Ramura a devenit plină cu corcoduşe. ", "Ramura a făcut ceva cu (nişte) corcoduşe.", "Ambele"]}],
-[["filler-inanimate",24], "Question", {q:" Pentru propoziţia <i>‘Planta a măzărit.’</i> ce interpretare aţi accepta? ", as: ["Planta a devenit plină cu măzăre.", "Planta a făcut ceva cu (nişte) măzăre.", "Ambele"]}],
-[["filler-inanimate",25], "Question", {q:" Pentru propoziţia <i>‘Bulbul a cepuit.’</i> ce interpretare aţi accepta? ", as: ["Bulbul a devenit ceapă.", "Bulbul a făcut ceva cu (nişte) ceapă.", "Ambele"]}],
-[["filler-inanimate",26], "Question", {q:" Pentru propoziţia <i>‘Pămȃntul a ridichit.’</i> ce interpretare aţi accepta? ", as: ["Pămȃntul a devenit plin cu ridichi.", " Pămȃntul a făcut ceva cu (nişte) ridichi.", "Ambele"]}],
-[["filler-inanimate",27], "Question", {q:" Pentru propoziţia <i>‘Livada a măruit.’</i> ce interpretare aţi accepta? ", as: ["Livada a devenit plină cu mere.", "Livada a făcut ceva cu (nişte) mere.", "Ambele"]}]
-];
   
