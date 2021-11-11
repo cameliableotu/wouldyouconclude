@@ -13,9 +13,9 @@ var shuffleSequence = seq(
     'debrief'
      );
 
-var sendingResultsMessage = "Vă rugăm să aşteptaţi. Răspunsurile dumneavoastră se trimit serverului."; 
-var completionMessage = "Mulţumim pentru participare!";
-var completionErrorMessage = "Eroare în trimiterea răspunsurilor dumneavoastră către server."; 
+var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
+var completionMessage = "Thanks for taking part in the experiment!";
+var completionErrorMessage = "There was an error in sending your answer to the server."; 
 
 // Controller settings.
 // Parameter settings taken from Staub 2009
@@ -53,7 +53,7 @@ var items = [
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Hai să exersăm un pic înainte de a începe efectiv."]
+                           ["p", "Let's practice a bit before we start."]
                          ]}],
 ['shared-intro', "Question", {q:"Pentru propoziţia <i>‘Omul a telefonat.’</i> ce interpretare aţi accepta? ",as: ["Omul a devenit ca un telefon.", "Omul a făcut ceva cu un telefon.",
                                                                                                             "Ambele"]}],
@@ -78,61 +78,87 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["SAD-verb",1], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+[["MODALITYNEGATION-notnecessary",1], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-se",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+[["MODALITYNEGATION-necessarynot",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
                    "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-pe",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+[["MODALITYNEGATION-notnecessary",2], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-la",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+[["MODALITYNEGATION-necessarynot",2], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",3], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",3], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                   "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",4], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",4], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",5], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",5], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                   "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",6], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",6], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",7], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",7], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                   "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-notnecessary",8], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["MODALITYNEGATION-necessarynot",8], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+    
+    
+    
+    
+    [["MODALITYNEGATION-notnecessary",1], "Question", {s:"In <i>‘You mustn't worry. The woman will give you the money.’</i> , <i>‘You mustn't worry’</i>  means",as: [['s','It is neccessary that you do not worry.'],['k','It is not necessary that you worry.']]},
+                                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't worry’</i> is in the context  <i>‘You mustn't worry. The woman will give you the money’?</i>’?"}],
+[["MODALITYNEGATION-necessarynot",1],  "Question", {s:"In <i>‘You mustn't worry. You will get sick otherwise’</i>, <i>‘You mustn't worry’</i> means",as: [['s','It is necessary that you do not worry.'],['k','It is not necessary that you worry.']]},
+                                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't worry’</i>  is in the context <i>‘You mustn't worry. You will get sick otherwise.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",2],  "Question",{s:"In <i>‘He mustn't panic. The teacher will give the class an easy test.’</i>, <i>‘He mustn't panic’</i> means",as: [['s','It is necessary that he does not panic.'],['k','It is not necessary that he panics.']]}, 
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘He mustn't panic’</i> is in the context <i>‘He mustn't panic. The teacher will give the class an easy test.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",2], "Question", {s:"In  <i>‘He mustn't panic. The bears will attack him otherwise.’</i>, <i>‘He mustn't panic’</i> means",as: [['s','It is necessary that he does not panic.'],['k','It is not necessary that he panics.']]}, 
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘He mustn't panic’</i> is in the context <i>‘He mustn't panic. The bears will attack him otherwise.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",3], "Question", {s:"In <i>‘She mustn't be sad. Her mom will find the doll.’</i>, <i>‘She mustn't be sad.’</i> means",as: [['s','It is necessary that she is not sad.'],['k','It is not necessary that she is sad.']]}, 
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘She mustn't be sad.’</i> is in the context <i>‘She mustn't be sad. Her mom will find the doll.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",3],  "Question", {s:"In <i>‘She mustn't be sad. She will ruin the party otherwise.’</i>, <i>‘She mustn't be sad.’</i> means", as: [['s','It is necessary that she is not sad.'],['k','It is not necessary that she is sad.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘She mustn't be sad.’</i> is in the context <i>‘She mustn't be sad. She will ruin the party otherwise.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",4],  "Question", {s:"In <i>‘You mustn't be angry. The man will reward you for your efforts.’</i>, <i>‘You mustn't be angry.’</i> means",as: [['s','It is necessary that you are not angry.'],['k','It is not necessary that you are angry.']]}, 
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't be angry.’</i> is in the context ‘You mustn't be angry. The man will reward you for your efforts.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",4], "Question", {s:"In <i>‘You mustn't be angry. Your mother will punish you otherwise.’</i>,<i>‘You mustn't be angry.’</i> means",as: [['s','It is necessary that you are not angry'],['k','It is not necessary that you are angry']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't be angry.’</i> is in the context <i>‘You mustn't be angry. Your mother will punish you otherwise.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",5], "Question", {s:"In <i>‘Tom mustn't eat the bread. It won't go stale by tomorrow.’</i>, <i>‘Tom mustn't eat the bread.’</i> means",as: [['s','It is necessary that Tom does not eat the bread.'],['k','It is not necessary that Tom eats the bread.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tom mustn't eat the bread.’</i> is in the context <i>‘Tom mustn't eat the bread. It won't go stale by tomorrow.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",5], "Question", {s:"In <i>‘Tom mustn't eat the bread. They have visitors coming over.’</i>, <i>‘Tom mustn't eat the bread.’</i> means",as: [['s','It is necessary that Tom does not eat the bread.'],['k','It is not necessary that Tom eats the bread.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Tom mustn't eat the bread.’</i> is in the context <i>‘Tom mustn't eat the bread. They have visitors coming over.’?"}],
+[["MODALITYNEGATION-notnecessary",6], "Question", {s:"In <i>‘You mustn't do office work at home. You managed to get it done already.’</i>, <i>‘You mustn't do office work.’</i> means",as: [['s','It is necessary that you do not do office work.'],['k','It is not necessary that you do office work.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't do office work at home.’</i> is in the context <i>‘You mustn't do office work at home. You managed to get it done already.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",6], "Question", {s:"In <i>‘You mustn't do  office work at home. Your wife and kids will be upset.’</i>,<i>‘You mustn't do office work.’</i> means",as: [['s','It is necessary that you do not do office work.'],['k','It is not necessary that you do office work.']]},
+                                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't do office work at home.’</i> is in the context <i>‘You mustn't do  office work at home. Your wife and kids will be upset.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",7], "Question", {s:"In <i>‘Linda mustn't speak German. All the German people in the office speak English.’</i>, <i>‘Linda mustn't speak German.’</i> means",as: [['s','It is necessary that you do not speak German.'],['k','It is not necessary that you speak German.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Linda mustn't speak German.’</i> is in the context<i>‘Linda mustn't speak German. All the German people in the office speak English.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",7], "Question", {s:"In <i>‘Linda mustn't speak German. Our guests only speak English.’</i>, <i>‘Linda mustn't speak German.’</i> means",as: [['s','It is necessary that you do not speak German.'],['k','It is not necessary that you speak German.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think  <i>‘Linda mustn't speak German.’</i> is in the context <i>‘Linda mustn't speak German. Our guests only speak English.’</i>?"}],
+[["MODALITYNEGATION-notnecessary",8], "Question", {s:"In <i>‘You mustn't drink alcohol. You are already in good spirits.’</i>, <i>‘You mustn't drink alcohol.’</i> means",as: [['s','It is necessary that you do not drink alcohol.'],['k','It is not necessary that you drink alcohol.']]},
+                                      "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't drink alcohol’</i> is in the context <i>‘You mustn't drink alcohol. You are already in good spirits.’</i>?"}],
+[["MODALITYNEGATION-necessarynot",8], "Question", {s:"In <i>‘You mustn't drink alcohol. It will make you feel sick.’</i>, <i>‘You mustn't drink alcohol.’</i> means",as: [['s','It is necessary that you do not drink alcohol.'],['k','It is not necessary that you drink alcohol.']]},
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't drink alcohol.’</i> is in the context <i>‘You mustn't drink alcohol. It will make you feel sick.’</i>?"}],
 
-[["SAD-verb",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
-                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-se",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
-                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-pe",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
-                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
-[["SAD-la",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
-                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
 
-[["SAD-verb",3], "Question", {q:"Pentru propoziţia <i>‘Marina a zmeurit.’</i> ce interpretare aţi accepta? ",as: ["Marina a devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
-[["SAD-se",3], "Question", {q:"Pentru propoziţia <i>‘Marina s-a zmeurit.’</i> ce interpretare aţi accepta? ",as: ["Marina a devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
-[["SAD-pe",3], "Question", {q:"Pentru propoziţia <i>‘Marina s-a zmeurit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Marina sau mȃinile ei au devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
-[["SAD-la",3], "Question", {q:"Pentru propoziţia <i>‘Marina s-a zmeurit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Marina sau mȃinile ei au devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
+//// Fillers
+[["filler-should",9],  "EPDashedSentence", {s:"+"},DS,  {s:"In 'Mary shouldn't be upset. Her father will give her a new car.', 'Mary shouldn't be upset.' means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]}],
+[["filler-should",10], "EPDashedSentence", {s:"+"}, DS, {s:"You shouldn't be annoyed. Your wife will cook dinner for you.', 'You shouldn't be annoyed.' means",as: [['s','It is necessary that you are not annoyed.'],['k','It is not necessary that you are annoyed.']]}],
+[["filler-should",11],  "EPDashedSentence", {s:"+"},DS, {s:"In 'Tim shouldn't cook rice. His girlfriend does not like it.', 'Tim shouldn't cook rice.' means",as: [['s','It is necessary that Tim does not cook rice.'],['k','It is not necessary that Tim cooks rice.']]}],
+[["filler-should",12],  "EPDashedSentence", {s:"+"},DS, {s:"In 'You shouldn't write the first draft yourself. Linda is the first author.', 'You shouldn't write the first draft yourself.' means",as: [['s','It is necessary that you do not write the first draft yourself.'],['k','It is not necessary that you write the first draft yourself.']]}],
+[["filler-need",13], "EPDashedSentence", {s:"+"},DS, {s:"In 'Tom needn't be offended. The woman didn't want to insult him at all.' means",as: [['s','It is necessary that Tom is not offended.'],['k','It is not necessary that Tom is offended.']]}],
+[["filler-need",14], "EPDashedSentence", {s:"+"},DS, {s:"+"}, DS, {s:"In 'You needn't be outraged. The professor is simply joking a bit.', 'You needn't be outraged.' means",as: [['s','It is necessary that you are not outraged.'],['k','It is not necessary that you are outraged.']]}],
+[["filler-need",15], "EPDashedSentence", {s:"+"},DS, {s:"In 'Sophie needn't tidy the room today. It still looks quite great.', 'Sophie needn't tidy the room today.' means",as: [['s','It is necessary that Sophie does not tidy the room.'],['k','It is not necessary that Sophie tidies the room.']]}],
+[["filler-need",16], "EPDashedSentence", {s:"+"},DS, {s:"In 'You needn't draw all the materials yourself. You can hire a designer', 'You needn't draw all the materials yourself.' means",as: [['s','It is necessary that you do not draw all the materials yourself.'],['k','It is not necessary that you draw all the materials yourself.']]}]
 
-[["SAD-verb",4], "Question", {q:"Pentru propoziţia <i>‘Daniel a castraveţit.’</i> ce interpretare aţi accepta? ",as: ["Daniel a devenit ca un castravete.", "Daniel a făcut ceva cu un castravete.", "Ambele"]}],
-[["SAD-se",4], "Question", {q:"Pentru propoziţia <i>‘Daniel s-a castraveţit.’</i> ce interpretare aţi accepta? ",as: ["Daniel a devenit ca un castravete.", "Daniel a făcut ceva cu un castravete.", "Ambele"]}],
-[["SAD-pe",4], "Question", {q:"Pentru propoziţia <i>‘Daniel s-a castraveţit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Daniel sau mȃinile lui au devenit ca un castravete.", "Daniel a făcut ceva cu un castravete.", "Ambele"]}],
-[["SAD-la",4], "Question", {q:"Pentru propoziţia <i>‘Daniel s-a castraveţit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Daniel sau mȃinile lui au devenit ca un castravete.", "Daniel a făcut ceva cu un castravete.", "Ambele"]}],
-
-
-
-[["SAD-verb",5], "Question", {q:"Pentru propoziţia <i>‘Laura a ciupercit.’</i> ce interpretare aţi accepta? ", as: ["Laura a devenit ca o ciupercă.", "Laura a făcut ceva cu o ciupercă.", "Ambele"]}],
-[["SAD-se",5], "Question", {q:"Pentru propoziţia <i>‘Laura s-a ciupercit.’</i> ce interpretare aţi accepta? ", as: ["Laura a devenit ca o ciupercă.", "Laura a făcut ceva cu o ciupercă.", "Ambele"]}],
-[["SAD-pe",5], "Question", {q:"Pentru propoziţia <i>‘Laura s-a ciupercit pe mȃini.’</i> ce interpretare aţi accepta? ", as: ["Laura sau mȃinile ei au devenit ca o ciupercă.", "Laura a făcut ceva cu o ciupercă.", "Ambele"]}],
-[["SAD-la",5], "Question", {q:"Pentru propoziţia <i>‘Laura s-a ciupercit la mȃini.’</i> ce interpretare aţi accepta? ", as: ["Laura sau mȃinile ei au devenit ca o ciupercă.", "Laura a făcut ceva cu o ciupercă.", "Ambele"]}],
-
-[["SAD-verb",6], "Question", {q:"Pentru propoziţia <i>‘Matei a conopidit.’</i> ce interpretare aţi accepta? ", as: ["Matei a devenit ca o conopidă.", "Matei a făcut ceva cu o conopidă.", "Ambele"]}],
-[["SAD-se",6], "Question", {q:"Pentru propoziţia <i>‘Matei s-a conopidit.’</i> ce interpretare aţi accepta? ", as: ["Matei a devenit ca o conopidă.", "Matei a făcut ceva cu o conopidă.", "Ambele"]}],
-[["SAD-pe",6], "Question", {q:"Pentru propoziţia <i>‘Matei s-a conopidit pe mȃini.’</i> ce interpretare aţi accepta? ", as: ["Matei sau mȃinile lui au devenit ca o conopidă.", "Matei a făcut ceva cu o conopidă.", "Ambele"]}],
-[["SAD-la",6], "Question", {q:"Pentru propoziţia <i>‘Matei s-a conopidit la mȃini.’</i> ce interpretare aţi accepta? ", as: ["Matei sau mȃinile lui au devenit ca o conopidă.", "Matei a făcut ceva cu o conopidă.", "Ambele"]}],
-
-[["SAD-verb",7], "Question", {q:"Pentru propoziţia <i>‘Elena a cartofit.’</i> ce interpretare aţi accepta? ", as: ["Elena a devenit ca un cartof.", "Elena a făcut ceva cu un cartof.", "Ambele"]}],
-[["SAD-se",7], "Question", {q:"Pentru propoziţia <i>‘Elena s-a cartofit.’</i> ce interpretare aţi accepta? ", as: ["Elena a devenit ca un cartof.", "Elena a făcut ceva cu un cartof.", "Ambele"]}],
-[["SAD-pe",7], "Question", {q:"Pentru propoziţia <i>‘Elena s-a cartofit pe mȃini.’</i> ce interpretare aţi accepta? ", as: ["Elena sau mȃinile ei au devenit ca un cartof.", "Elena a făcut ceva cu un cartof.", "Ambele"]}],
-[["SAD-la",7], "Question", {q:"Pentru propoziţia <i>‘Elena s-a cartofit la mȃini.’</i> ce interpretare aţi accepta? ", as: ["Elena sau mȃinile ei devenit ca un cartof.", "Elena a făcut ceva cu un cartof.", "Ambele"]}],
-
-[["SAD-verb",8], "Question", {q:"Pentru propoziţia <i>‘Monica a pepenit.’</i> ce interpretare aţi accepta? ", as: ["Monica a devenit ca un pepene.", "Monica a făcut ceva cu un pepene.", "Ambele"]}],
-[["SAD-se",8], "Question", {q:"Pentru propoziţia <i>‘Monica s-a pepenit.’</i> ce interpretare aţi accepta? ", as: ["Monica a devenit ca un pepene.", "Monica a făcut ceva cu un pepene.", "Ambele"]}],
-[["SAD-pe",8], "Question", {q:"Pentru propoziţia <i>‘Monica s-a pepenit pe mȃini.’</i> ce interpretare aţi accepta? ", as: ["Monica sau mȃinile ei au devenit ca un pepene.", "Monica a făcut ceva cu un pepene.", "Ambele"]}],
-[["SAD-la",8], "Question", {q:"Pentru propoziţia <i>‘Monica s-a pepenit la mȃini.’</i> ce interpretare aţi accepta? ", as: ["Monica sau mȃinile ei au devenit ca un pepene.", "Monica a făcut ceva cu un pepene.", "Ambele"]}],
-
-
-[["SAD-verb",9], "Question", {q:"Pentru propoziţia <i>‘Alexandru a dovlecit.’</i> ce interpretare aţi accepta? ", as: ["Alexandru a devenit ca un dovleac.", "Alexandru a făcut ceva cu un dovleac.", "Ambele"]}],
-[["SAD-se",9], "Question", {q:"Pentru propoziţia <i>‘Alexandru s-a dovlecit.’</i> ce interpretare aţi accepta? ", as: ["Alexandru a devenit ca un dovleac.", "Alexandru a făcut ceva cu un dovleac.", "Ambele"]}],
-[["SAD-pe",9], "Question", {q:"Pentru propoziţia <i>‘Alexandru s-a dovlecit pe mȃini.’</i> ce interpretare aţi accepta? ", as: ["Alexandru sau mȃinile lui au devenit ca un dovleac.", "Alexandru a făcut ceva cu un dovleac.", "Ambele"]}],
-[["SAD-la",9], "Question", {q:"Pentru propoziţia <i>‘Alexandru s-a dovlecit la mȃini.’</i> ce interpretare aţi accepta? ", as: ["Alexandru sau mȃinile lui au devenit ca un dovleac.", "Alexandru a făcut ceva cu un dovleac.", "Ambele"]}],
+];
 
 
 [["filler-passive",10], "Question", {q:" Pentru propoziţia <i>‘Mirela a fost spănacită.’</i> ce interpretare aţi accepta? ", as: ["Mirela a devenit ca spanacul.", "Cineva i-a făcut ceva Mirelei cu spanacul.", "Ambele"]}],
