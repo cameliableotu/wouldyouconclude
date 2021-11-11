@@ -28,6 +28,13 @@ var defaults = [
     "Question", {
         hasCorrect: false
     },
+    
+        "AcceptabilityJudgment", {
+        as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
+        presentAsScale: true,                               /// Should it be presented as a scale? 'true' or 'false'
+        instructions: "Use number keys or click boxes to answer.",    /// Brief instructions present on each trial
+        leftComment: "(Bad)", rightComment: "(Good)"        /// Labels on end-points of scale
+    }
     "Message", {
         hideProgressBar: true
     }
@@ -71,15 +78,23 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["SAD-verb",1], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]}],
-[["SAD-se",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]}],
-[["SAD-pe",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]}],
-[["SAD-la",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]}],
+[["SAD-verb",1], "Question", {q:"Pentru propoziţia <i>‘Maria a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-se",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit.’</i> ce interpretare aţi accepta? ",as: ["Maria a devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                   "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-pe",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                 "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-la",1], "Question", {q:"Pentru propoziţia <i>‘Maria s-a cireşit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Maria sau mȃinile ei au devenit ca o cireaşă.", "Maria a făcut ceva cu o cireaşă.", "Ambele"]},
+                "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
 
-[["SAD-verb",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]}],
-[["SAD-se",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]}],
-[["SAD-pe",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]}],
-[["SAD-la",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]}],
+[["SAD-verb",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
+                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-se",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit.’</i> ce interpretare aţi accepta? ",as: ["Dumitru a devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
+                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-pe",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit pe mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
+                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
+[["SAD-la",2], "Question", {q:"Pentru propoziţia <i>‘Dumitru s-a piersicit la mȃini.’</i> ce interpretare aţi accepta? ",as: ["Dumitru sau mȃinile lui au devenit ca o piersică.", "Dumitru a făcut ceva cu o piersică.", "Ambele"]},
+                  "AcceptabilityJudgment", {s:"How would you rate this statement?"}],
 
 [["SAD-verb",3], "Question", {q:"Pentru propoziţia <i>‘Marina a zmeurit.’</i> ce interpretare aţi accepta? ",as: ["Marina a devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
 [["SAD-se",3], "Question", {q:"Pentru propoziţia <i>‘Marina s-a zmeurit.’</i> ce interpretare aţi accepta? ",as: ["Marina a devenit ca o zmeură.", "Marina a făcut ceva cu o zmeură.", "Ambele"]}],
