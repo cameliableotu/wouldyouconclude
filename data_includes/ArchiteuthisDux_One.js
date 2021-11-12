@@ -55,20 +55,21 @@ var items = [
                    html: ["div",
                            ["p", "Let's practice a bit before we start."]
                          ]}],
-['shared-intro', "Question", {q:"Pentru propoziţia <i>‘Omul a telefonat.’</i> ce interpretare aţi accepta? ",as: ["Omul a devenit ca un telefon.", "Omul a făcut ceva cu un telefon.",
-                                                                                                            "Ambele"]}],
+['shared-intro', "Question", {q:"In <i>‘Linda doesn't have to shout. Everyone can hear her.’</i> the sentence <i>‘Linda doesn't have to shout’</i> means",as: ["It is necessary that Linda does not shout.", "It is not necessary that Linda shouts."]]},
+                   "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Linda doesn't have to shout’</i> is in the context  <i>‘Linda doesn't have to shout. Everyone can hear her.’?</i>’?"}],                                                                                            
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Cum vi s-a părut? Pur şi simplu alegeţi interpretarea/interpretările care vi se pare/par potrivită/potrivite’."],           
-                           ["p", "Hai să mai exersăm un pic."],
+                           ["p", "How did you find it? You simply have to choose the interpretation that seems more suitable, and, afterwards, you have to say how acceptable you find the sentence’."],           
+                           ["p", "Let's practice more."],
                          ]}],
-['shared-intro', "Question", {q:"Pentru propoziţia <i>‘Grădina a înflorit.’</i> ce interpretare aţi accepta? ",as: ["Grădina a devenit plină cu flori.", "Grădina a făcut ceva cu ((nişte) flori.",
-                                                                                                            "Ambele"]}],
-  ['shared-intro', "Question", {q:"Pentru propoziţia <i>‘Mihai a înroşit ouăle.’</i> ce interpretare aţi accepta? ",as: ["Ouăle au devenit roşii.", "Mihai a făcut ceva cu ouăle.",
-                                                                                                            "Ambele"]}],
-  ['shared-intro', "Question", {q:"Pentru propoziţia <i>‘Claudia s-a aricit la auzul veştii.’</i> ce interpretare aţi accepta? ",as: ["Claudia a devenit ca ariciul.", "Claudia a făcut ceva cu un arici.",
-                                                                                                            "Ambele"]}],
+['shared-intro', "Question", {q:"In <i>In‘Don't tell lies! Your friend will be upset with you.’</i>, the sentence <i>‘Don't tell lies!’</i> means",as: ["It is necessary that you do not tell lies.", "It is not necessary that you tell lies."]]},
+                  "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Dont tell lies!’</i> is in the context  <i>‘Don't tell lies! Your friend will be upset with you’?</i>’?"}],  
+['shared-intro', "Question", {q:"In <i>In ‘You don't have to fret. You will lose the case.’</i>, the sentence <i>‘ You don't have to fret. ’</i> means",as: ["It is necessary that you do not fret.", "It is not necessary that you fret."]]},
+                  "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You don't have to fret. ’</i> is in the context  <i>‘You don't have to fret. You will lose the case.’?</i>’?"}],   
+['shared-intro', "Question", {q:"In <i>‘In 'Don't be tall! There are enough tall people in the room.’</i> the sentence  <i>‘Don't be tall!’ means ",as: ["It is necessary that you are tall.", "It is not necessary that you are tall."]]},
+                 "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Dont be tall!’</i> is in the context  <i>‘Don't be tall! There are enough tall people in the room.’?</i>’?"}], 
+
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
@@ -78,7 +79,7 @@ var items = [
 // Shared experimental items + fillers
   
 
-    [["MODALITYNEGATION-notnecessary",1], "Question", {q:"In <i>‘You mustn't worry. The woman will give you the money.’</i> , <i>‘You mustn't worry’</i>  means",as: [['s','It is neccessary that you do not worry.'],['k','It is not necessary that you worry.']]},
+[["MODALITYNEGATION-notnecessary",1], "Question", {q:"In <i>‘You mustn't worry. The woman will give you the money.’</i> , <i>‘You mustn't worry’</i>  means",as: [['s','It is neccessary that you do not worry.'],['k','It is not necessary that you worry.']]},
                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't worry’</i> is in the context  <i>‘You mustn't worry. The woman will give you the money’?</i>’?"}],
 [["MODALITYNEGATION-necessarynot",1],  "Question", {q:"In <i>‘You mustn't worry. You will get sick otherwise’</i>, <i>‘You mustn't worry’</i> means",as: [['s','It is necessary that you do not worry.'],['k','It is not necessary that you worry.']]},
                                       "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘You mustn't worry’</i>  is in the context <i>‘You mustn't worry. You will get sick otherwise.’</i>?"}],
