@@ -1,4 +1,4 @@
-// Pumpkin//experimentwithRodica
+// Modalityandnegationexperiments//
 // Do show progress bar (fine! I give in)
 
 var showProgressBar = true;
