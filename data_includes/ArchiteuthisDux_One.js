@@ -55,7 +55,7 @@ var items = [
                    html: ["div",
                            ["p", "Let's practice a bit before we start."]
                          ]}],
-['shared-intro', "Question", {q:"In <i>‘Linda doesn't have to shout. Everyone can hear her.’</i> the sentence <i>‘Linda doesn't have to shout’</i> means",as: ['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
+['shared-intro', "Question", {q:"In <i>‘Linda doesn't have to shout. Everyone can hear her.’</i> the sentence <i>‘Linda doesn't have to shout’</i> means",as: [['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
                    "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Linda doesn't have to shout’</i> is in the context  <i>‘Linda doesn't have to shout. Everyone can hear her.’</i>?"}],                                                                                            
 
 ['shared-intro', Message, {consentRequired: false,
