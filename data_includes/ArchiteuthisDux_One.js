@@ -62,6 +62,7 @@ var items = [
                    html: ["div",
                            ["p", "How did you find it? You simply have to choose the interpretation that seems more suitable, and, afterwards, you have to say how acceptable you find the sentence’."],           
                            ["p", "Let's practice more."],
+                           ]}],
                    
 ['shared-intro', "Question", {q:"In <i>‘Don't tell lies! Your friend will be upset with you.’</i>, the sentence <i>‘Don't tell lies!’</i> means",as: ["It is necessary that you do not tell lies.", "It is not necessary that you tell lies."]]},
                   "AcceptabilityJudgment", {s: "How acceptable do you think <i>‘Dont tell lies!’</i> is in the context  <i>‘Don't tell lies! Your friend will be upset with you’</i>’?"}],  
