@@ -74,7 +74,7 @@ var items = [
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "Bun, gata cu exersatul! Apăsaţi orice tastă când sunteţi gata să începeţi."]
+                           ["p", "Great, you are done practicing! Press any key when you are ready to begin."]
                         ]}],
   
 // Shared experimental items + fillers
