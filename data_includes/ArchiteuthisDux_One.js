@@ -55,8 +55,8 @@ var items = [
                    html: ["div",
                            ["p", "Let's practice a bit before we start."]
                          ]}],
-['shared-intro', "Question", {q:"In <i>Linda doesn't have to shout. Everyone can hear her.</i> the sentence <i>Linda doesn't have to shout</i> means",as: [['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
-                   "AcceptabilityJudgment", {s: "How acceptable do you think <i>Linda doesn't have to shout</i> is in the context  <i>Linda doesn't have to shout. Everyone can hear her.</i>?"}],                                                                                            
+['shared-intro', "Question", {q:"In ‘Linda doesn't have to shout. Everyone can hear her.’</i> the sentence ‘Linda doesn't have to shout’ means",as: [['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
+                   "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda doesn't have to shout’ is in the context ‘Linda doesn't have to shout. Everyone can hear her.’?"}],                                                                                            
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
@@ -64,8 +64,8 @@ var items = [
                            ["p", "Let's practice more."],
                            ]}],
                    
-['shared-intro', "Question", {q:"In ‘Don't tell lies! Your friend will be upset with you’.</i>, the sentence ‘Don't tell lies!’</i> means",as: [['s', 'It is necessary that you do not tell lies.'], ['k','It is not necessary that you tell lies.']]},
-                  "AcceptabilityJudgment", {s: "How acceptable do you think ‘Dont tell lies!’ is in the context ‘Don't tell lies! Your friend will be upset with you’’?"}],  
+['shared-intro', "Question", {q:"In ‘Don't tell lies! Your friend will be upset with you’., the sentence ‘Don't tell lies!’ means",as: [['s', 'It is necessary that you do not tell lies.'], ['k','It is not necessary that you tell lies.']]},
+                  "AcceptabilityJudgment", {s: "How acceptable do you think ‘Dont tell lies!’ is in the context ‘Don't tell lies! Your friend will be upset with you’?"}],  
 ['shared-intro', "Question", {q:"In ‘You don't have to fret. You will lose the case.’, the sentence ‘You don't have to fret.’ means",as: [['s', 'It is necessary that you do not fret.'], ['k', 'It is not necessary that you fret.']]},
                   "AcceptabilityJudgment", {s: "How acceptable do you think ‘You don't have to fret.’ is in the context ‘You don't have to fret. You will lose the case.’?"}],   
 ['shared-intro', "Question", {q:"In ‘Don't be tall! There are enough tall people in the room.’ the sentence ‘Don't be tall!’ means ",as: [['s', 'It is necessary that you are tall.'], ['k', 'It is not necessary that you are tall.']]},
