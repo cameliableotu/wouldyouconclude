@@ -1,5 +1,6 @@
 // Modalityandnegationexperiments//
 // Do show progress bar (fine! I give in)
+uniqueID = [1,2,3,4].map(v=>Math.floor((1+Math.random())*0x10000).toString(16).substring(1)).join('-');
 
 var showProgressBar = true;
 
