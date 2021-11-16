@@ -33,7 +33,7 @@ var defaults = [
         as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
         presentAsScale: true,                               /// Should it be presented as a scale? 'true' or 'false'
         instructions: "Use number keys or click boxes to answer.",    /// Brief instructions present on each trial
-        leftComment: "(Bad)", rightComment: "(Good)"        /// Labels on end-points of scale
+        leftComment: "(Fully unacceptable)", rightComment: "(Fully acceptable)"        /// Labels on end-points of scale
     },
     "Message", {
         hideProgressBar: true
@@ -55,7 +55,7 @@ var items = [
                    html: ["div",
                            ["p", "Let's practice a bit before we start."]
                          ]}],
-['shared-intro', "Question", {q:"In ‘Linda doesn't have to shout. Everyone can hear her.’</i> the sentence ‘Linda doesn't have to shout’ means",as: [['s', 'Linda is obliged not to shout.'], ['k','Linda is not obliged to shout.']]},
+['shared-intro', "Question", {q:"In ‘Linda doesn't have to shout. Everyone can hear her.’, the sentence ‘Linda doesn't have to shout’ means",as: [['s', 'Linda is obliged not to shout.'], ['k','Linda is not obliged to shout.']]},
                    "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda doesn't have to shout’ is in the context ‘Linda doesn't have to shout. Everyone can hear her.’?"}],                                                                                            
 
 ['shared-intro', Message, {consentRequired: false,
@@ -105,7 +105,7 @@ var items = [
 [["MODALITYNEGATION-necessarynot",6], "Question", {q:"In ‘You mustn't do  office work at home. Your wife and kids will be upset.’ ,‘You mustn't do office work.’ means",as: [['s','You are obliged not to do office work.'],['k','You are not obliged to do office work.']]},
                                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘You mustn't do office work at home.’ is in the context ‘You mustn't do  office work at home. Your wife and kids will be upset.’</i>?"}],
 [["MODALITYNEGATION-notnecessary",7], "Question", {q:"In ‘Linda mustn't speak German. All the German people in the office speak English.’, ‘Linda mustn't speak German.’ means",as: [['s','You are obliged not to speak German.'],['k','You are not obliged to speak German.']]},
-                                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda mustn't speak German.’is in the context ‘Linda mustn't speak German. All the German people in the office speak English.’?"}],
+                                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda mustn't speak German.’ is in the context ‘Linda mustn't speak German. All the German people in the office speak English.’?"}],
 [["MODALITYNEGATION-necessarynot",7], "Question", {q:"In ‘Linda mustn't speak German. Our guests only speak English.’, ‘Linda mustn't speak German.’ means",as: [['s','You are obliged not to speak German.'],['k','You are not obliged to speak German.']]},
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda mustn't speak German.’ is in the context ‘Linda mustn't speak German. Our guests only speak English.’?"}],
 [["MODALITYNEGATION-notnecessary",8], "Question", {q:"In ‘You mustn't drink alcohol. You are already in good spirits.’,‘You mustn't drink alcohol.’ means",as: [['s','You are obliged not to drink alcohol.'],['k','You are not obliged to drink alcohol.']]},
@@ -140,11 +140,11 @@ var items = [
                         "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda shouldn’t help Mary.’ is in the context ‘Linda shouldn’t help Mary. Mary is feeling very lost.’?"}],
 [["filler-should",20],  "Question", {q:"In  ‘You shouldn't talk kindly to yourself. You will end up with depression.’, 'You shouldn't talk kindly to yourself.' means",as: [['s','You are obliged not to talk kindly to yourself.'],['k','You are not obliged to talk kindly to yourself.']]},
                         "AcceptabilityJudgment", {s: "How acceptable do you think ‘You shouldn't talk kindly to yourself.’ is in the context ‘You  shouldn't talk kindly to yourself. You will end up with depression.’?"}],
-[["filler-need", 21], "Question", {q:"In ‘Bill needn't be excited. The woman invited him to his favorite films.’, ‘Bill needn't be excited’ means",as: [['s','Bob is obliged not to be excited .'],['k','Bob is not obliged to be excited.']]},
-                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘Bob needn't be mad.’ is in the context ‘Bob needn't be mad. The woman wanted to hurt his feelings.’?"}],
+[["filler-need", 21], "Question", {q:"In ‘Bill needn't be excited. The woman invited him to his favorite film.’, ‘Bill needn't be excited.’ means",as: [['s','Bill is obliged not to be excited.'],['k','Bill is not obliged to be excited.']]},
+                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘Bill needn't be excited.’ is in the context ‘Bill needn't be excited. The woman invited him to his favorite film.’?"}],
 [["filler-need",22], "Question", {q:"In  ‘You needn't be pleased. Your husband gave you a wonderful gift.’, ‘You needn't be pleased. ’ means",as: [['s','You are obliged not to be pleased.'],['k','You are not obliged to be pleased.']]},
                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn't be pleased.’ is in the context ‘' You needn't be pleased. Your husband gave you a wonderful gift.’?"}],
-[["filler-need",23], "Question", {q:"In ‘Sarah needn't take care of the sick. They are in great suffering.’, ‘Sarah needn't take care of the sick.’ means",as: [['s','Sarah is obliged not to take care of the sick.'],['k','Sophie is not obliged to take care of the sick.']]},
+[["filler-need",23], "Question", {q:"In ‘Sarah needn't take care of the sick. They are in great suffering.’, ‘Sarah needn't take care of the sick.’ means",as: [['s','Sarah is obliged not to take care of the sick.'],['k','Sarah is not obliged to take care of the sick.']]},
                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘Sophie needn't take care of the sick.’ is in the context ‘Sarah needn't take care of the sick. They are in great suffering.’?"}],
 [["filler-need",24], "Question", {q:"In ‘You needn't sweep the floor. It is very dirty.’, ‘You needn't sweep the kitchen.’ means",as: [['s','You are obliged not to sweep the floor.'],['k','You are not obliged to sweep the floor.']]},
                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn’t sweep the floor. It is very dirty.’ is in the context ‘You needn’t sweep the floor. It is very dirty.’?"}]
