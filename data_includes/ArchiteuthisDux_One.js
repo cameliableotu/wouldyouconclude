@@ -153,7 +153,7 @@ var items = [
                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn't be pleased.’ is in the context ‘' You needn't be pleased. Your husband gave you a wonderful gift.’?"}],
 [["filler-need",23], "Question", {q:"In ‘Sarah needn't take care of the sick. They are in great suffering.’, ‘Sarah needn't take care of the sick.’ means",as: [['s','Sarah is obliged not to take care of the sick.'],['k','Sarah is not obliged to take care of the sick.']]},
                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘Sophie needn't take care of the sick.’ is in the context ‘Sarah needn't take care of the sick. They are in great suffering.’?"}],
-[["filler-need",24], "Question", {q:"In ‘You needn't sweep the floor. It is very dirty.’, ‘You needn't sweep the kitchen.’ means",as: [['s','You are obliged not to sweep the floor.'],['k','You are not obliged to sweep the floor.']]},
+[["filler-need",24], "Question", {q:"In ‘You needn't sweep the floor. It is very dirty.’, ‘You needn't sweep the floor.’ means",as: [['s','You are obliged not to sweep the floor.'],['k','You are not obliged to sweep the floor.']]},
                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn’t sweep the floor. It is very dirty.’ is in the context ‘You needn’t sweep the floor. It is very dirty.’?"}]
 
 ];
