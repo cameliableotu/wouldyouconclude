@@ -117,7 +117,7 @@ var items = [
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda mustn't speak German.’ is in the context ‘Linda mustn't speak German. Our guests only speak English.’?"}],
 [["MODALITYNEGATION-notnecessary",8], "Question", {q:"In ‘You mustn't drink alcohol. You are already in good spirits.’,‘You mustn't drink alcohol.’ means",as: [['s','You are obliged not to drink alcohol.'],['k','You are not obliged to drink alcohol.']]},
                                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘You mustn't drink alcohol’ is in the context ‘You mustn't drink alcohol. You are already in good spirits.’?"}],
-[["MODALITYNEGATION-necessarynot",8], "Question", {q:"In‘You mustn't drink alcohol. It will make you feel sick.’,‘You mustn't drink alcohol.’ means",as: [['s','You are obliged not to drink alcohol.'],['k','You are not obliged to drink alcohol.']]},
+[["MODALITYNEGATION-necessarynot",8], "Question", {q:"In ‘You mustn't drink alcohol. It will make you feel sick.’,‘You mustn't drink alcohol.’ means",as: [['s','You are obliged not to drink alcohol.'],['k','You are not obliged to drink alcohol.']]},
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘You mustn't drink alcohol.’ is in the context ‘You mustn't drink alcohol. It will make you feel sick.’?"}],
 
 
