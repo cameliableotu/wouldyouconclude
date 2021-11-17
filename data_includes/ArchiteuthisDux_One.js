@@ -10,8 +10,9 @@ var shuffleSequence = seq(
     'setcounter',
     'intro',
     'shared-intro',
-    sepWith("sep", rshuffle(startsWith('MODALITYNEGATION'),startsWith('filler')), "debrief", "hiddenCompletionCode")
-     );
+    sepWith("sep", rshuffle(startsWith('MODALITYNEGATION'),startsWith('filler'))),
+    "debrief", 
+    "hiddenCompletionCode");
 
 var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
 var completionMessage = "Thanks for taking part in the experiment!";
