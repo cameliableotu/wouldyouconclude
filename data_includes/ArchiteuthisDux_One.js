@@ -10,8 +10,7 @@ var shuffleSequence = seq(
     'setcounter',
     'intro',
     'shared-intro',
-    sepWith("sep", rshuffle(startsWith('MODALITYNEGATION'),startsWith('filler'))),
-    'debrief'
+    sepWith("sep", rshuffle(startsWith('MODALITYNEGATION'),startsWith('filler')), "debrief", "hiddenCompletionCode")
      );
 
 var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
@@ -154,9 +153,13 @@ var items = [
 [["filler-need",23], "Question", {q:"In ‘Sarah needn't take care of the sick. They are in great suffering.’, ‘Sarah needn't take care of the sick.’ means",as: [['s','Sarah is obliged not to take care of the sick.'],['k','Sarah is not obliged to take care of the sick.']]},
                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘Sophie needn't take care of the sick.’ is in the context ‘Sarah needn't take care of the sick. They are in great suffering.’?"}],
 [["filler-need",24], "Question", {q:"In ‘You needn't sweep the floor. It is very dirty.’, ‘You needn't sweep the floor.’ means",as: [['s','You are obliged not to sweep the floor.'],['k','You are not obliged to sweep the floor.']]},
-                     "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn’t sweep the floor. It is very dirty.’ is in the context ‘You needn’t sweep the floor. It is very dirty.’?"}]
+                     "AcceptabilityJudgment", {s: "How acceptable do you think ‘You needn’t sweep the floor. It is very dirty.’ is in the context ‘You needn’t sweep the floor. It is very dirty.’?"}],
+["hiddenCompletionCode", "FlashSentence", {s: String(completionCode), timeout: 1, sentenceDescType: "literal"}] 
 
-];
+
+    ]   
+
+
 
 
 
