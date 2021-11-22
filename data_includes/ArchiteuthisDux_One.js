@@ -93,7 +93,7 @@ var items = [
                                       "AcceptabilityJudgment", {s: "How acceptable do you think ‘You mustn't worry’ is in the context ‘You mustn't worry. You will get sick otherwise.’?"}],
 [["MODALITYNEGATION-notnecessary",2],  "Question",{q:"In ‘He mustn't panic. The teacher will give the class an easy test.’, ‘He mustn't panic’ means",as: [['s','It is necessary that he does not panic.'],['k','It is not necessary that he panics.']]}, 
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘He mustn't panic’ is in the context ‘He mustn't panic. The teacher will give the class an easy test.’?"}],
-[["MODALITYNEGATION-notnecessary",2], "Question", {q:"In ‘He mustn't panic. The bears will attack him otherwise.’, ‘He mustn't panic’ means",as: [['s','It is necessary that he does not panic.'],['k','It is not necessary that he panics.']]}, 
+[["MODALITYNEGATION-necessarynot",2], "Question", {q:"In ‘He mustn't panic. The bears will attack him otherwise.’, ‘He mustn't panic’ means",as: [['s','It is necessary that he does not panic.'],['k','It is not necessary that he panics.']]}, 
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘He mustn't panic’ is in the context ‘He mustn't panic. The bears will attack him otherwise.’?"}],
 [["MODALITYNEGATION-notnecessary",3], "Question", {q:"In ‘She mustn't be sad. Her mom will find the doll.’, ‘She mustn't be sad.’ means",as: [['s','It is necessary that she is not sad.'],['k','It is not necessary that she is sad.']]}, 
                                        "AcceptabilityJudgment", {s: "How acceptable do you think ‘She mustn't be sad.’ is in the context ‘She mustn't be sad. Her mom will find the doll.’?"}],
