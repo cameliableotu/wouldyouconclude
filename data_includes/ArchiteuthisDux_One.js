@@ -192,6 +192,14 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'Some movies are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'No movie is hilarious.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'Some but not all movies are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a1",13],"Question", {q:"Would you infer from ‘Some layouts are good.’ that 'Some but not all layouts are good but not perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some layouts are good.’ that 'Some layouts are good but not perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some layouts are good.’ that 'No joke  is perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some layouts are good.’ that 'Some but not all layouts are good but not perfect.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",13],"Question", {q:"Would you infer from ‘Some solutions are good.’ that 'Some but not all solutions are good but not perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some solutions are good.’ that 'Some solutions are good but not perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some solutions are good.’ that 'No joke  is perfect.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some solutions are good.’ that 'Some but not all solutions are good but not perfect.'?",as: [['s','Yes'],['k','No']]}],
 
 //// Fillers
 [["filler-should",9],"Question", {q:"In ‘Mary shouldn't be upset. Her father will give her a new car.’, ‘Mary shouldn't be upset.’ means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]},
