@@ -176,6 +176,14 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some teachers dislike fighting.’ that 'Some teachers dislike but do not loathe fighting.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some teachers dislike fighting.’ that 'No doctor loathes fighting.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some teachers dislike fighting.’ that 'Some but not all teachers dislike but do not loathe fighting.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a1",11],"Question", {q:"Would you infer from ‘Some biologists saw few of the birds.’ that 'Some but not all biologists saw few of the birds.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some biologists saw few of the birds.’ that 'Some biologists saw few but not none of the birds.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some biologists saw few of the birds.’ that 'No biologist saw none of the birds.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some biologists saw few of the birds.’ that 'Some but not all biologists saw few but not none of the birds.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",11],"Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'Some but not all cops saw few of the children.'?",as: [['s','Yes'],['k','No']]},
+                        "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'Some cops saw few but not none of the children.'?",as: [['s','Yes'],['k','No']]},
+                        "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'No cop saw none of the children.'?",as: [['s','Yes'],['k','No']]},
+                        "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'Some but not all cops saw few but not none of the children.'?",as: [['s','Yes'],['k','No']]}],
 
 //// Fillers
 [["filler-should",9],"Question", {q:"In ‘Mary shouldn't be upset. Her father will give her a new car.’, ‘Mary shouldn't be upset.’ means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]},
