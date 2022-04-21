@@ -129,17 +129,23 @@ var items = [
                           "Question", {q:"Would you infer from ‘Some houses are big.’ that 'No houses are enormous.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],   
     
+[["IMPLICATURES-a1",6],    "Question", {q:"Would you infer from ‘Some meals are cheap.’ that 'Some, but not all meals are cheap.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some meals are cheap.’ that 'Some meals are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some meals are cheap.’ that 'No meals are free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some meals are cheap.’ that 'Some but not all meals are cheap, but not free.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",6],   "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some, but not all drinks are cheap.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some, but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'No drinks are free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],   
     
-[["IMPLICATURES-a1",6],    "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some, but not all elephants are big.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'No elephants are enormous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some but not all elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],
-[["IMPLICATURES-a2",6],   "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some, but not all houses are big.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'No houses are enormous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],   
-    
-    
+[["IMPLICATURES-a1",7],    "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'Some, but not all homemakers are content.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'Some homemakers are content but not happy.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'No homemakers are happy.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'Some but not all meals are cheap, but not free.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",7],   "Question", {q:"Would you infer from ‘’ that 'Some, but not all drinks are cheap.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some, but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'No drinks are free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}], 
     
     
     
