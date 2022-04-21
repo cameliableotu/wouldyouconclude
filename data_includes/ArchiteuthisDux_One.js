@@ -94,8 +94,16 @@ var items = [
 [["IMPLICATURES-a2",1],   "Question", {q:"Would you infer from ‘Some salaries are adequate.’ that 'Some, but not all salaries are adequate.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some salaries are adequate.’ that 'Some salaries are adequate, but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some salaries are adequate.’ that 'No salaries are good.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some salaries are adequate.’ that 'No salaries are good.'?",as: [['s','Yes'],['k','No']]}],
- [["IMPLICATURES-a1",3],   "Question", {q:"Would you infer from ‘Some singers are attractive.’ that 'Some, but not all singers are attractive.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some salaries are adequate.’ that 'Some, but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
+  [["IMPLICATURES-a1",2], "Question", {q:"Would you infer from ‘Some work breaks are allowed.’ that 'Some, but not all work breaks are allowed.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some work breaks are allowed.’ that 'Some work breaks are allowed, but not obligatory.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some work breaks are allowed.’ that 'No work breaks are allowed.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some work breaks are allowed.’ that 'Some but not all work breaks are allowed, but not obligatory.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",2],   "Question", {q:"Would you infer from ‘Some dance moves are allowed.’ that 'Some, but not all dance moves are allowed.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some dance moves are allowed.’ that 'Some dance moves are allowed, but not obligatory.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some dance moves are allowed.’ that 'No dance moves are obligatory.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some dance moves are allowed.’ that 'Some, but not all dance moves are allowed, not obligatory.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a1",3],   "Question", {q:"Would you infer from ‘Some singers are attractive.’ that 'Some, but not all singers are attractive.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some singers are attractive.’ that 'Some singers are attractive, but not stunning.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some singers are attractive.’ that 'No singers are stunning.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some singers are attractive.’ that 'Some but not all singers are attractive, but not stunning'?",as: [['s','Yes'],['k','No']]}],
@@ -112,6 +120,29 @@ var items = [
                           "Question", {q:"Would you infer from ‘Some teachers believe it will happen.’ that 'No teachers know it will happen.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some teachers believe it will happen.’ that 'Some but not all teachers believe, but do not know it will happen.'?",as: [['s','Yes'],['k','No']]}],
 
+[["IMPLICATURES-a1",5],    "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some, but not all elephants are big.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'No elephants are enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some but not all elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",5],   "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some, but not all houses are big.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'No houses are enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],   
+    
+    
+[["IMPLICATURES-a1",6],    "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some, but not all elephants are big.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'No elephants are enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some elephants are big.’ that 'Some but not all elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",6],   "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some, but not all houses are big.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'No houses are enormous.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],   
+    
+    
+    
+    
+    
 //// Fillers
 [["filler-should",9],"Question", {q:"In ‘Mary shouldn't be upset. Her father will give her a new car.’, ‘Mary shouldn't be upset.’ means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]},
                      "AcceptabilityJudgment", {s: "How acceptable do you think ‘Mary shouldn't be upset.’ is in the context ‘Mary shouldn't be upset. Her father will give her a new car.’?"}],          
