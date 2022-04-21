@@ -184,6 +184,14 @@ var items = [
                         "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'Some cops saw few but not none of the children.'?",as: [['s','Yes'],['k','No']]},
                         "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'No cop saw none of the children.'?",as: [['s','Yes'],['k','No']]},
                         "Question", {q:"Would you infer from ‘Some cops saw few of the children.’ that 'Some but not all cops saw few but not none of the children.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a1",12],"Question", {q:"Would you infer from ‘Some jokes are funny.’ that 'Some but not all jokes are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some jokes are funny.’ that 'Some jokes are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some jokes are funny.’ that 'No joke  is hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some jokes are funny.’ that 'Some but not all jokes are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",12],"Question", {q:"Would you infer from ‘Some movies are funny.’ that 'Some but not all movies are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'Some movies are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'No movie is hilarious.'?",as: [['s','Yes'],['k','No']]},
+                       "Question", {q:"Would you infer from ‘Some movies are funny.’ that 'Some but not all movies are funny but not hilarious.'?",as: [['s','Yes'],['k','No']]}],
 
 //// Fillers
 [["filler-should",9],"Question", {q:"In ‘Mary shouldn't be upset. Her father will give her a new car.’, ‘Mary shouldn't be upset.’ means",as: [['s','It is necessary that Mary is not upset.'],['k','It is not necessary that Mary is upset.']]},
