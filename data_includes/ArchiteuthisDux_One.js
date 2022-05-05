@@ -29,6 +29,10 @@ var defaults = [
     "Question", {
         hasCorrect: false
     },
+	"EPDashedSentence", {
+    mode: 'self-paced reading',
+    display: 'in place'
+},
     
         "AcceptabilityJudgment", {
         as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
@@ -87,14 +91,16 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1],  ,"Question", {q:"Mary: Some meals are adequate.<b> Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Mary: Some meals are adequate.<b> Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q: "Mary: Some meals are adequate.<b> Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q: "Mary: Some meals are adequate.<b>Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
-[["IMPLICATURES-a2",1],   "Question", {q: "Tom: Some salaries are adequate.<b>Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q: "Tom: Some salaries are adequate.<b>Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
-                          "Question", {q: "Tom: Some salaries are adequate.<b>Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
-                          "Question", {q:"Tom: Some salaries are adequate.<b>Would you conclude from this that, according to Tom, some but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a1",1], "EPDashedSentence", {["Mary: Some meals are adequate."]},
+                       "Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
+                        "EPDashedSentence", {["Mary: Some meals are adequate."]}, 
+                        "Question", {q: "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
+                        "EPDashedSentence", {["Mary: Some meals are adequate."]}, "Question", {q: "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
+                        "EPDashedSentence", {["Mary: Some meals are adequate."]},"Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",1],   "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
+                          "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
+                          "Question", {q:"Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
  [["IMPLICATURES-a3",1],   "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible but not certain that the meals are adequate.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible that the meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is certain that the meals are not good.'?",as: [['s','Yes'],['k','No']]},
