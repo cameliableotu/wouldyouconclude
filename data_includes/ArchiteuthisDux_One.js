@@ -14,6 +14,8 @@ var shuffleSequence = seq(
     "debrief", 
     "hiddenCompletionCode");
 
+ var DS = "EPDashedSentence";
+
 var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
 var completionMessage = "Thanks for taking part in the experiment!";
 var completionErrorMessage = "There was an error in sending your answer to the server."; 
@@ -91,12 +93,12 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1], "EPDashedSentence", {["Mary: Some meals are adequate."]},
+[["IMPLICATURES-a1",1], DS, {["Mary: Some meals are adequate."]},
                        "Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
-                        "EPDashedSentence", {["Mary: Some meals are adequate."]}, 
+                        DS, {["Mary: Some meals are adequate."]}, 
                         "Question", {q: "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-                        "EPDashedSentence", {["Mary: Some meals are adequate."]}, "Question", {q: "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
-                        "EPDashedSentence", {["Mary: Some meals are adequate."]},"Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
+                       DS, {["Mary: Some meals are adequate."]}, "Question", {q: "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
+                       DS, {["Mary: Some meals are adequate."]},"Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a2",1],   "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
