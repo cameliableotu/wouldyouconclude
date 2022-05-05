@@ -89,14 +89,14 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1], "Question", {q: "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
-                        "Question", {q:  "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-            "Question", {q:  "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},            
-            "Question", {q: "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],            
-[["IMPLICATURES-a2",1],   "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'Some but not all salaries are adequate.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'Some salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'No salary is good.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'Some but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",1],   "Question", {q:"Would you infer from 'Some meals are adequate.'that 'Some but not all meals are adequate.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some meals are adequate.' that 'Some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some meals are adequate.' that 'No meal is good.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some meals are adequate.'that 'Some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
+[["IMPLICATURES-a2",1],   "Question", {q:"Would you infer from 'Some salaries are adequate.â€™ that 'Some but not all salaries are adequate.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some salaries are adequate.â€™ that 'Some salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some salaries are adequate.â€™ that 'No salary is good.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from 'Some salaries are adequate.â€™ that 'Some but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
  [["IMPLICATURES-a3",1],   "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible but not certain that the meals are adequate.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible that the meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is certain that the meals are not good.'?",as: [['s','Yes'],['k','No']]},
