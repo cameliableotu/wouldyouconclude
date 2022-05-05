@@ -33,22 +33,10 @@ var defaults = [
     },
 	"EPDashedSentence", {
         mode: 'speeded acceptability',
-        display: 'in place',
-        blankText: '+',
-        wordTime: 1000,
-        wordPauseTime: 150
+        display: 'in place'
+        
         },
-        DS, {randomOrder: false,
-        presentHorizontally: true,
-        mode: 'speeded acceptability',
-        display: 'in place',
-        blankText: '+',
-        wordTime: 250,
-        wordPauseTime: 150,
-        timeout: 3000,
-        hasCorrect: false,
-        q: ''},
-    
+        
         "AcceptabilityJudgment", {
         as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
         presentAsScale: true,                               /// Should it be presented as a scale? 'true' or 'false'
@@ -106,12 +94,12 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1], DS, {["Mary: Some meals are adequate."]},
+[["IMPLICATURES-a1",1], "EPDashedSentence", {["Mary: Some meals are adequate."]},
                        "Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
-                        DS, {["Mary: Some meals are adequate."]}, 
+                        "EPDashedSentence", {["Mary: Some meals are adequate."]}, 
                         "Question", {q: "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-                       DS, {["Mary: Some meals are adequate."]}, "Question", {q: "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
-                       DS, {["Mary: Some meals are adequate."]},"Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
+                       "EPDashedSentence", {["Mary: Some meals are adequate."]}, "Question", {q: "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},
+                       "EPDashedSentence", {["Mary: Some meals are adequate."]},"Question", {q: "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a2",1],   "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
