@@ -1,4 +1,4 @@
-// Modalityandnegationexperiments//
+/ Modalityandnegationexperiments//
 // Do show progress bar (fine! I give in)
 uniqueID = [1,2,3,4].map(v=>Math.floor((1+Math.random())*0x10000).toString(16).substring(1)).join('-');
 
@@ -13,7 +13,6 @@ var shuffleSequence = seq(
     sepWith("sep", rshuffle(startsWith('IMPLICATURES'),startsWith('filler'))),
     "debrief", 
     "hiddenCompletionCode");
-
 
 var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
 var completionMessage = "Thanks for taking part in the experiment!";
@@ -30,12 +29,7 @@ var defaults = [
     "Question", {
         hasCorrect: false
     },
-	"EPDashedSentence", {
-        mode: 'speeded acceptability',
-        display: 'in place'
-        
-        },
-        
+    
         "AcceptabilityJudgment", {
         as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
         presentAsScale: true,                               /// Should it be presented as a scale? 'true' or 'false'
@@ -68,27 +62,29 @@ var items = [
                    html: ["div",
                            ["p", "Let's practice a bit before we start."]
                          ]}],
-['shared-intro', "Question", {q:"In ‘Linda doesn't have to shout. Everyone can hear her.’, the sentence ‘Linda doesn't have to shout’ means",as: [['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
-                   "AcceptabilityJudgment", {s: "How acceptable do you think ‘Linda doesn't have to shout’ is in the context ‘Linda doesn't have to shout. Everyone can hear her.’?"}],                                                                                            
+['shared-intro', "Question", {q:"In â€˜Linda doesn't have to shout. Everyone can hear her.â€™, the sentence â€˜Linda doesn't have to shoutâ€™ means",as: [['s', 'It is necessary that Linda does not shout.'], ['k','It is not necessary that Linda shouts.']]},
+                   "AcceptabilityJudgment", {s: "How acceptable do you think â€˜Linda doesn't have to shoutâ€™ is in the context â€˜Linda doesn't have to shout. Everyone can hear her.â€™?"}],                                                                                            
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
-                           ["p", "How did you find it? You simply have to choose the interpretation that seems more suitable, and, afterwards, you have to say how acceptable you find the sentence’."],           
+                           ["p", "How did you find it? You simply have to choose the interpretation that seems more suitable, and, afterwards, you have to say how acceptable you find the sentenceâ€™."],           
                            ["p", "Let's practice more."],
                            ]}],
                    
-['shared-intro', "Question", {q:"In ‘Don't tell lies! Your friend will be upset with you’., the sentence ‘Don't tell lies!’ means",as: [['s', 'It is necessary that you do not tell lies.'], ['k','It is not necessary that you tell lies.']]},
-                  "AcceptabilityJudgment", {s: "How acceptable do you think ‘Dont tell lies!’ is in the context ‘Don't tell lies! Your friend will be upset with you’?"}],  
-['shared-intro', "Question", {q:"In ‘You don't have to fret. You will lose the case.’, the sentence ‘You don't have to fret.’ means",as: [['s', 'It is necessary that you do not fret.'], ['k', 'It is not necessary that you fret.']]},
-                  "AcceptabilityJudgment", {s: "How acceptable do you think ‘You don't have to fret.’ is in the context ‘You don't have to fret. You will lose the case.’?"}],   
-['shared-intro', "Question", {q:"In ‘Don't be tall! There are enough tall people in the room.’ the sentence ‘Don't be tall!’ means ",as: [['s', 'It is necessary that you are not tall.'], ['k', 'It is not necessary that you are tall.']]},
-                 "AcceptabilityJudgment", {s: "How acceptable do you think ‘Dont be tall!’ is in the context ‘Don't be tall! There are enough tall people in the room.’?"}], 
+['shared-intro', "Question", {q:"In â€˜Don't tell lies! Your friend will be upset with youâ€™., the sentence â€˜Don't tell lies!â€™ means",as: [['s', 'It is necessary that you do not tell lies.'], ['k','It is not necessary that you tell lies.']]},
+                  "AcceptabilityJudgment", {s: "How acceptable do you think â€˜Dont tell lies!â€™ is in the context â€˜Don't tell lies! Your friend will be upset with youâ€™?"}],  
+['shared-intro', "Question", {q:"In â€˜You don't have to fret. You will lose the case.â€™, the sentence â€˜You don't have to fret.â€™ means",as: [['s', 'It is necessary that you do not fret.'], ['k', 'It is not necessary that you fret.']]},
+                  "AcceptabilityJudgment", {s: "How acceptable do you think â€˜You don't have to fret.â€™ is in the context â€˜You don't have to fret. You will lose the case.â€™?"}],   
+['shared-intro', "Question", {q:"In â€˜Don't be tall! There are enough tall people in the room.â€™ the sentence â€˜Don't be tall!â€™ means ",as: [['s', 'It is necessary that you are not tall.'], ['k', 'It is not necessary that you are tall.']]},
+                 "AcceptabilityJudgment", {s: "How acceptable do you think â€˜Dont be tall!â€™ is in the context â€˜Don't be tall! There are enough tall people in the room.â€™?"}], 
 
 
 ['shared-intro', Message, {consentRequired: false,
                    html: ["div",
                            ["p", "Great, you are done practicing! Press any key when you are ready to begin."]
                         ]}],
+  
+// Shared experimental items + fillers
   
 // Shared experimental items + fillers
   
