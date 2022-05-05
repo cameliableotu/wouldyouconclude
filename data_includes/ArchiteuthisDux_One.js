@@ -88,7 +88,7 @@ var items = [
   
 
 [["IMPLICATURES-a1",1],   "Question", {"Mary: <i>Some meals are adequate.</i>",  
-                                        q:"Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
+                                        q: "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
                           "Question", {"Mary: <i> Some meals are adequate.</i>",  
                                         q: "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {"Mary: <i> Some meals are adequate.</i>",
@@ -97,11 +97,11 @@ var items = [
                                         q:"Would you conclude from this that, according to Mary, some but not all meals are adequate but not good?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a2",1],   "Question", {"Tom: <i> Some salaries are adequate.</i>",
 				        q:"Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
-                          "Question", {"Tom: <i> Some salaries are adequate.</i>,
+                          "Question", {"Tom: <i> Some salaries are adequate.</i>",
 				        q:"Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
-                          "Question", {"Tom: <i> Some salaries are adequate.</i>,
+                          "Question", {"Tom: <i> Some salaries are adequate.</i>",
 				       q:"Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
-                          "Question", {"Tom: <i> Some salaries are adequate.</i>’,
+                          "Question", {"Tom: <i> Some salaries are adequate.</i>’",
 				        q:"Would you conclude from this that, according to Tom, some but not all salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
  [["IMPLICATURES-a3",1],   "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible but not certain that the meals are adequate.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are adequate.’ that 'It is possible that the meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
