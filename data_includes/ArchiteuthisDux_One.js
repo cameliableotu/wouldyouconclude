@@ -32,9 +32,22 @@ var defaults = [
         hasCorrect: false
     },
 	"EPDashedSentence", {
-    mode: 'self-paced reading',
-    display: 'in place'
-},
+        mode: 'speeded acceptability',
+        display: 'in place',
+        blankText: '+',
+        wordTime: 1000,
+        wordPauseTime: 150
+        },
+        DS, {randomOrder: false,
+        presentHorizontally: true,
+        mode: 'speeded acceptability',
+        display: 'in place',
+        blankText: '+',
+        wordTime: 250,
+        wordPauseTime: 150,
+        timeout: 3000,
+        hasCorrect: false,
+        q: ''},
     
         "AcceptabilityJudgment", {
         as: ["1", "2", "3", "4", "5", "6", "7"],            /// What are options on Likert scale? Define both # of options and their labels.
