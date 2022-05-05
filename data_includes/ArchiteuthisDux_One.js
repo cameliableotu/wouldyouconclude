@@ -809,7 +809,7 @@ var items = [
 [["filler-some",50],"Question", {q:"Would you infer from ‘Some streets are wide.’ that 'Some but not all streets are wide'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'Some streets are wide but not narrow. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'No street is narrow.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'Some but not all streets are wide but not narrow.'?",as: [['s','Yes'],['k','No']]}],
+                       "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'Some but not all streets are wide but not narrow.'?",as: [['s','Yes'],['k','No']]},
 
      
 
