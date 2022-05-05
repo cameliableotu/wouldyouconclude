@@ -93,10 +93,10 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1], "Question", {q: "Mary: Some meals are adequate." <br> "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]}]],
-                        "Question", {q:  "Mary: Some meals are adequate." <br> "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}]],
-			"Question", {q:  "Mary: Some meals are adequate."<br> "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]}]],			
-			"Question", {q: "Mary: Some meals are adequate."<br> "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}]]],			
+[["IMPLICATURES-a1",1], "Question", {q: "Mary: Some meals are adequate." <br> "Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
+                        "Question", {q:  "Mary: Some meals are adequate." <br> "Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
+			"Question", {q:  "Mary: Some meals are adequate."<br> "Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},			
+			"Question", {q: "Mary: Some meals are adequate."<br> "Would you conclude from this that, according to Mary, some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],			
 [["IMPLICATURES-a2",1],   "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some but not all salaries are adequate?",as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, some salaries are adequate but not good?", as: [['s','Yes'],['k','No']]},
                           "Question", {q: "Tom: Some salaries are adequate.Would you conclude from this that, according to Tom, no salary is good.'?",as: [['s','Yes'],['k','No']]},	  
