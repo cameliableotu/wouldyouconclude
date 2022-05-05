@@ -11,12 +11,12 @@ var shuffleSequence = seq(
     'intro',
     'shared-intro',
     sepWith("sep", rshuffle(startsWith('IMPLICATURES'),startsWith('filler'))),
-    "debrief", 
+    "debrief",
     "hiddenCompletionCode");
 
-var sendingResultsMessage = "Please wait. Your answers are being sent to the server."; 
+var sendingResultsMessage = "Please wait. Your answers are being sent to the server.";
 var completionMessage = "Thanks for taking part in the experiment!";
-var completionErrorMessage = "There was an error in sending your answer to the server."; 
+var completionErrorMessage = "There was an error in sending your answer to the server.";
 
 // Controller settings.
 // Parameter settings taken from Staub 2009
@@ -40,11 +40,11 @@ var defaults = [
         hideProgressBar: true
     }
 ];
-var randomnumber=Math.floor(Math.random()*10000000001); 
-var completionCode=String("LIR" + randomnumber); 
-var sendingResultsMessage = "The results are now being transferred. Please wait."; 
-var completionMessage = "Thank you for your participation. The results were successfully transmitted. Your participation code is: " + completionCode; 
-var completionErrorMessage = "The transmission of the results failed. Please contact cameliableotu@gmail.com and retry the transmission again by clicking the link. Your participation code is: " + completionCode; 
+var randomnumber=Math.floor(Math.random()*10000000001);
+var completionCode=String("LIR" + randomnumber);
+var sendingResultsMessage = "The results are now being transferred. Please wait.";
+var completionMessage = "Thank you for your participation. The results were successfully transmitted. Your participation code is: " + completionCode;
+var completionErrorMessage = "The transmission of the results failed. Please contact cameliableotu@gmail.com and retry the transmission again by clicking the link. Your participation code is: " + completionCode;
 
 
 // Items array.
@@ -76,7 +76,7 @@ var items = [
 ['shared-intro', "Question", {q:"In â€˜You don't have to fret. You will lose the case.â€™, the sentence â€˜You don't have to fret.â€™ means",as: [['s', 'It is necessary that you do not fret.'], ['k', 'It is not necessary that you fret.']]},
                   "AcceptabilityJudgment", {s: "How acceptable do you think â€˜You don't have to fret.â€™ is in the context â€˜You don't have to fret. You will lose the case.â€™?"}],   
 ['shared-intro', "Question", {q:"In â€˜Don't be tall! There are enough tall people in the room.â€™ the sentence â€˜Don't be tall!â€™ means ",as: [['s', 'It is necessary that you are not tall.'], ['k', 'It is not necessary that you are tall.']]},
-                 "AcceptabilityJudgment", {s: "How acceptable do you think â€˜Dont be tall!â€™ is in the context â€˜Don't be tall! There are enough tall people in the room.â€™?"}], 
+                 "AcceptabilityJudgment", {s: "How acceptable do you think â€˜Dont be tall!â€™ is in the context â€˜Don't be tall! There are enough tall people in the room.â€™?"}],
 
 
 ['shared-intro', Message, {consentRequired: false,
@@ -91,8 +91,8 @@ var items = [
 
 [["IMPLICATURES-a1",1], "Question", {q: "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some but not all meals are adequate.?",as: [['s','Yes'],['k','No']]},
                         "Question", {q:  "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
-			"Question", {q:  "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},			
-			"Question", {q: "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],			
+            "Question", {q:  "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, no meal is good.'?",as: [['s','Yes'],['k','No']]},            
+            "Question", {q: "Mary: Some meals are adequate.Would you conclude from this that, according to Mary, some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],            
 [["IMPLICATURES-a2",1],   "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'Some but not all salaries are adequate.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'Some salaries are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from â€˜Some salaries are adequate.â€™ that 'No salary is good.'?",as: [['s','Yes'],['k','No']]},
@@ -160,7 +160,7 @@ var items = [
 [["IMPLICATURES-a2",5],   "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some houses are big.’ that 'No house is enormous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}], 
+                          "Question", {q:"Would you infer from ‘Some houses are big.’ that 'Some but not all houses are big but not enormous.'?",as: [['s','Yes'],['k','No']]}],
  [["IMPLICATURES-a3",5],  "Question", {q:"Would you infer from ‘It is possible  that the elephants are big.’ that 'It is possible  but not certain that the elephants are big.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the elephants are big.’ that 'It is possible that the elephants are big but not enormous.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the elephants are big.’ that 'It is certain that the elephants are not enormous.'?",as: [['s','Yes'],['k','No']]},
@@ -178,13 +178,13 @@ var items = [
                           "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'No drink is free.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],   
 [["IMPLICATURES-a3",6],  "Question", {q:"Would you infer from ‘It is possible  that the meals are cheap.’ that 'It is possible  but not certain that the meals are cheap.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is possible that the meals are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is certain that the meals are not free.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is possible but not certain that the meals are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is possible that the meals are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is certain that the meals are not free.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the meals are cheap.’ that 'It is possible but not certain that the meals are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a3",6],  "Question", {q:"Would you infer from ‘It is possible  that the drinks are cheap.’ that 'It is possible  but not certain that the drinks are cheap.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is possible that the drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is certain that the drinks are not free.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is possible but not certain that the drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is possible that the drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is certain that the drinks are not free.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the drinks are cheap.’ that 'It is possible but not certain that the drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",7],    "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'Some but not all homemakers are content.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'Some homemakers are content but not happy.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some homemakers are content.’ that 'No homemaker is happy.'?",as: [['s','Yes'],['k','No']]},
@@ -192,7 +192,7 @@ var items = [
 [["IMPLICATURES-a2",7],   "Question", {q:"Would you infer from ‘’ that 'Some but not all drinks are cheap.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'No drink is free.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}], 
+                          "Question", {q:"Would you infer from ‘Some drinks are cheap.’ that 'Some but not all drinks are cheap but not free.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",8],"Question", {q:"Would you infer from ‘Some days are cool.’ that 'Some but not all days are cool.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some days are cool.’ that 'Some days are cool but not cold.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some days are cool.’ that 'No day is cold.'?",as: [['s','Yes'],['k','No']]},
@@ -202,13 +202,13 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some temperatures are cool.’ that 'No temperature is cold.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some temperatures are cool.’ that 'Some but not all temperatures are cool but not cold.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a3",8],  "Question", {q:"Would you infer from ‘It is possible  that the days are cool.’ that 'It is possible  but not certain that the days are cool.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is possible that the days are cool but not cold.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is certain that the days are not cold.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is possible but not certain that the days are cool but not cold.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is possible that the days are cool but not cold.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is certain that the days are not cold.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the days are cool.’ that 'It is possible but not certain that the days are cool but not cold.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a4",8],  "Question", {q:"Would you infer from ‘It is possible  that the temperatures are cool.’ that 'It is possible  but not certain that the temperatures are cool.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is possible that the temperatures are cool but not cold.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is certain that the temperatures are not cold.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is possible but not certain that the temperatures are cool but not cold.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is possible that the temperatures are cool but not cold.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is certain that the temperatures are not cold.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the temperatures are cool.’ that 'It is possible but not certain that the temperatures are cool but not cold.'?",as: [['s','Yes'],['k','No']]}],
  [["IMPLICATURES-a1",9],"Question", {q:"Would you infer from ‘Some fabrics are dark.’ that 'Some but not all fabrics are dark.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some fabrics are dark.’ that 'Some fabrics are dark but not black.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some fabrics are dark.’ that 'No day is black.'?",as: [['s','Yes'],['k','No']]},
@@ -218,13 +218,13 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some skies are dark.’ that 'No day is black.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some skies are dark.’ that 'Some but not all skies are dark, but not black.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a3",9],  "Question", {q:"Would you infer from ‘It is possible  that the fabrics are dark.’ that 'It is possible  but not certain that the fabrics are dark.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is possible that the fabrics are dark but not black.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is certain that the fabrics are not black.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is possible but not certain that the fabrics are dark but not black.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is possible that the fabrics are dark but not black.'?",as: [['s','Yes'],['k','No']]},
+                         "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is certain that the fabrics are not black.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the fabrics are dark.’ that 'It is possible but not certain that the fabrics are dark but not black.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a4",9],  "Question", {q:"Would you infer from ‘It is possible  that the skies are dark.’ that 'It is possible  but not certain that the skies are dark.'?",as: [['s','Yes'],['k','No']]},
-	                     "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is possible that the skies are dark but not black.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is certain that the skies are not black.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is possible but not certain that the skies are dark but not black.'?",as: [['s','Yes'],['k','No']]}],
+                         "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is possible that the skies are dark but not black.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is certain that the skies are not black.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the skies are dark.’ that 'It is possible but not certain that the skies are dark but not black.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",10],"Question", {q:"Would you infer from ‘Some problems are difficult.’ that 'Some but not all problems are difficult.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some problems are difficult.’ that 'Some problems are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some problems are difficult.’ that 'No day is impossible.'?",as: [['s','Yes'],['k','No']]},
@@ -234,13 +234,13 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some tasks are difficult.’ that 'No day is impossible.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some tasks are difficult.’ that 'Some but not all tasks are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a3",10],  "Question", {q:"Would you infer from ‘It is possible  that the problems are difficult.’ that 'It is possible  but not certain that the problems are difficult.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is possible that the problems are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]},
-	                       "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is certain that the problems are not impossible.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is possible but not certain that the problems are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]}],
+                          "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is possible that the problems are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]},
+                           "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is certain that the problems are not impossible.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the problems are difficult.’ that 'It is possible but not certain that the problems are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a4",10],  "Question", {q:"Would you infer from ‘It is possible  that the tasks are difficult.’ that 'It is possible  but not certain that the tasks are difficult.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is possible that the tasks are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is certain that the tasks are not impossible.'?",as: [['s','Yes'],['k','No']]},
-	                      "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is possible but not certain that the tasks are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]}],
+                          "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is possible that the tasks are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is certain that the tasks are not impossible.'?",as: [['s','Yes'],['k','No']]},
+                          "Question", {q:"Would you infer from ‘It is possible that the tasks are difficult.’ that 'It is possible but not certain that the tasks are difficult but not impossible.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",11],"Question", {q:"Would you infer from ‘Some doctors dislike coffee.’ that 'Some but not all doctors dislike coffee.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some doctors dislike coffee.’ that 'Some doctors dislike but do not loathe coffee.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some doctors dislike coffee.’ that 'No doctor loathes coffee.'?",as: [['s','Yes'],['k','No']]},
@@ -369,7 +369,7 @@ var items = [
 [["IMPLICATURES-a4",18],    "Question", {q:"Would you infer from ‘It is possible  that the students are intelligent.’ that 'It is possible  but not certain that the students are intelligent.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the students are intelligent.’ that 'It is possible that the students are intelligent but not brilliant.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the students are intelligent.’ that 'It is certain that the students are not brilliant.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the students are intelligent.’ that 'It is possible but not certain that the students are intelligent but not brilliant.'?",as: [['s','Yes'],['k','No']]}], 
+                          "Question", {q:"Would you infer from ‘It is possible that the students are intelligent.’ that 'It is possible but not certain that the students are intelligent but not brilliant.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",19],"Question", {q:"Would you infer from ‘Some actresses like the movie.’ that 'Some but not all actresses like but do not love the movie.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some actresses like the movie.’ that 'Some actresses like but do not love the movie.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some actresses like the movie.’ that 'No actress loves the movie.'?",as: [['s','Yes'],['k','No']]},
@@ -481,7 +481,7 @@ var items = [
 [["IMPLICATURES-a3",26],  "Question", {q:"Would you infer from ‘It is possible  that the meals are palatable.’ that 'It is possible  but not certain that the meals are palatable.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are palatable.’ that 'It is possible that the meals are palatable but not delicious?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the meals are palatable.’ that 'It is certain that the meals are not delicious.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the meals are palatable.’ that 'It is possible but not certain that the meals are palatable but not delicious.'?",as: [['s','Yes'],['k','No']]}], 
+                          "Question", {q:"Would you infer from ‘It is possible that the meals are palatable.’ that 'It is possible but not certain that the meals are palatable but not delicious.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a4",26],    "Question", {q:"Would you infer from ‘It is possible  that the wines are palatable.’ that 'It is possible  but not certain that the wines are palatable.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the wines are palatable.’ that 'It is possible that the wines are palatable but not delicious?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the wines are palatable.’ that 'It is certain that the wines are not delicious.'?",as: [['s','Yes'],['k','No']]},
@@ -501,7 +501,7 @@ var items = [
 [["IMPLICATURES-a4",27],   "Question", {q:"Would you infer from ‘It is possible that the skiers participated.’ that 'It is possible  but not certain that the skiers participated.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the skiers participated.’ that 'It is possible that the skiers participated but did not win .'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the skiers participated .’ that 'It is certain that the skiers did nor win .'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the skiers participated.’ that 'It is possible but not certain that the skiers participated but did not win .'?",as: [['s','Yes'],['k','No']]}],	 
+                          "Question", {q:"Would you infer from ‘It is possible that the skiers participated.’ that 'It is possible but not certain that the skiers participated but did not win .'?",as: [['s','Yes'],['k','No']]}],     
 [["IMPLICATURES-a1",28],"Question", {q:"Would you infer from ‘Some errors are possible.’ that 'Some but not all errors are possible'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some errors are possible.’ that 'Some errors are possible but not certain. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some errors are possible.’ that 'No error is certain.'?",as: [['s','Yes'],['k','No']]},
@@ -581,7 +581,7 @@ var items = [
 [["IMPLICATURES-a4",32], "Question", {q:"Would you infer from ‘It is possible that the songs are silly.’ that 'It is possible but not certain that the songs are silly.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the songs are silly.’ that 'It is possible that the songs are silly but not ridiculous?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the songs are silly.’ that 'It is certain that the songs are not ridiculous.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the songs are silly.’ that 'It is possible but not certain that the songs are silly but not ridiculous.'?",as: [['s','Yes'],['k','No']]}], 
+                          "Question", {q:"Would you infer from ‘It is possible that the songs are silly.’ that 'It is possible but not certain that the songs are silly but not ridiculous.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1", 33],"Question", {q:"Would you infer from ‘Some cars are small.’ that 'Some but not all cars are small'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some cars are small.’ that 'Some cars are small but not tiny. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some cars are small.’ that 'No car is tiny.'?",as: [['s','Yes'],['k','No']]},
@@ -645,7 +645,7 @@ var items = [
 [["IMPLICATURES-a4",36],"Question", {q:"Would you infer from ‘It is possible that the doctors are sometimes late.’ that 'It is possible but not certain that  doctors are sometimes late.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the doctors are sometimes late.’ that 'It is possible that the doctors are sometimes but not always late. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the doctors are sometimes late.’ that 'It is certain that the doctors are not always late.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘It is possible that the doctors are sometimes late.’ that 'It is possible but not certain that the doctors are sometimes but not always late.'?",as: [['s','Yes'],['k','No']]}], 
+                       "Question", {q:"Would you infer from ‘It is possible that the doctors are sometimes late.’ that 'It is possible but not certain that the doctors are sometimes but not always late.'?",as: [['s','Yes'],['k','No']]}],
 [["IMPLICATURES-a1",37],"Question", {q:"Would you infer from ‘Some dresses are special.’ that 'Some but not all dresses are special'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dresses are special.’ that 'Some dresses are special but not unique. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dresses are special.’ that 'No dress is unique.'?",as: [['s','Yes'],['k','No']]},
@@ -657,11 +657,11 @@ var items = [
 [["IMPLICATURES-a3",37], "Question", {q:"Would you infer from ‘It is possible that the dresses are special.’ that 'It is possible but not certain that the dresses are special.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the dresses are special.’ that 'It is possible that the dresses are special but not unique?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the dresses are special.’ that 'It is certain that the dresses are not unique.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the dresses are special.’ that 'It is possible but not certain that the dresses are special but not unique.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the dresses are special.’ that 'It is possible but not certain that the dresses are special but not unique.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a4",37], "Question", {q:"Would you infer from ‘It is possible that the paintings are special.’ that 'It is possible but not certain that the paintings are special.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the paintings are special.’ that 'It is possible that the paintings are special but not unique?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the paintings are special.’ that 'It is certain that the paintings are not unique.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the paintings are special.’ that 'It is possible but not certain that the paintings are special but not unique.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the paintings are special.’ that 'It is possible but not certain that the paintings are special but not unique.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a1",38],"Question", {q:"Would you infer from ‘Some dancers started.’ that 'Some but not all dancers started'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dancers started.’ that 'Some dancers started but did not finish. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dancers started.’ that 'No dancer finished.'?",as: [['s','Yes'],['k','No']]},
@@ -673,11 +673,11 @@ var items = [
 [["IMPLICATURES-a3",38],"Question", {q:"Would you infer from ‘It is possible that the dancers started.’ that 'It is possible but not certain that the dancers started'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the dancers started.’ that 'It is possible that the dancers started but did not finish. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the dancers started.’ that 'It is certain that the dancers did not finish.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘It is possible that the dancers started.’ that 'It is possible but not certain that the dancers started but did not finish'?",as: [['s','Yes'],['k','No']]}],	 
+                       "Question", {q:"Would you infer from ‘It is possible that the dancers started.’ that 'It is possible but not certain that the dancers started but did not finish'?",as: [['s','Yes'],['k','No']]}],     
 [["IMPLICATURES-a4",38],"Question", {q:"Would you infer from ‘It is possible that the runners started.’ that 'It is possible but not certain that the runners started'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the runners started.’ that 'It is possible that the runners started but did not finish. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the runners started.’ that 'It is certain that the runners did not finish.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘It is possible that the runners started.’ that 'It is possible but not certain that the runners started but did not finish'?",as: [['s','Yes'],['k','No']]}],		 
+                       "Question", {q:"Would you infer from ‘It is possible that the runners started.’ that 'It is possible but not certain that the runners started but did not finish'?",as: [['s','Yes'],['k','No']]}],         
  [["IMPLICATURES-a1",39],"Question", {q:"Would you infer from ‘Some runners are tired.’ that 'Some but not all runners are tired'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some runners are tired.’ that 'Some runners are tired but not exhausted. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some runners are tired.’ that 'No runner is exhausted.'?",as: [['s','Yes'],['k','No']]},
@@ -705,12 +705,12 @@ var items = [
 [["IMPLICATURES-a3",40],"Question", {q:"Would you infer from ‘It is possible that the athletes tried.’ that 'It is possible but not certain that the athletes tried'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the athletes tried.’ that 'It is possible that the athletes tried but did not succeed. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the athletes tried.’ that 'It is certain that the athletes did not succeed.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘It is possible that the athletes tried.’ that 'It is possible but not certain that the athletes tried but did not succeed'?",as: [['s','Yes'],['k','No']]}],	
+                       "Question", {q:"Would you infer from ‘It is possible that the athletes tried.’ that 'It is possible but not certain that the athletes tried but did not succeed'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a4",40],"Question", {q:"Would you infer from ‘It is possible that the candidates tried.’ that 'It is possible but not certain that the candidates tried'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the candidates tried.’ that 'It is possible that the candidates tried but did not succeed. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘It is possible that the candidates tried.’ that 'It is certain that the candidates did not succeed.'?",as: [['s','Yes'],['k','No']]},
-                       "Question", {q:"Would you infer from ‘It is possible that the candidates tried.’ that 'It is possible but not certain that the candidates tried but did not succeed'?",as: [['s','Yes'],['k','No']]}],	
-	 
+                       "Question", {q:"Would you infer from ‘It is possible that the candidates tried.’ that 'It is possible but not certain that the candidates tried but did not succeed'?",as: [['s','Yes'],['k','No']]}],    
+     
 [["IMPLICATURES-a1", 41],"Question", {q:"Would you infer from ‘Some paintings are ugly.’ that 'Some but not all paintings are ugly'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some paintings are ugly.’ that 'Some paintings are ugly but not hideous. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some paintings are ugly.’ that 'No painting is hideous.'?",as: [['s','Yes'],['k','No']]},
@@ -738,11 +738,11 @@ var items = [
 [["IMPLICATURES-a3",42], "Question", {q:"Would you infer from ‘It is possible that the movies are unsettling.’ that 'It is possible but not certain that the movies are unsettling.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the movies are unsettling.’ that 'It is possible that the movies are unsettling but not horrific?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the movies are unsettling.’ that 'It is certain that the movies are not horrific.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the movies are unsettling.’ that 'It is possible but not certain that the movies are unsettling but not horrific.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the movies are unsettling.’ that 'It is possible but not certain that the movies are unsettling but not horrific.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a4",42], "Question", {q:"Would you infer from ‘It is possible that the news are unsettling.’ that 'It is possible but not certain that the news are unsettling.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the news are unsettling.’ that 'It is possible that the news are unsettling but not horrific?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the news are unsettling.’ that 'It is certain that the news are not horrific.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the news are unsettling.’ that 'It is possible but not certain that the news are unsettling but not horrific.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the news are unsettling.’ that 'It is possible but not certain that the news are unsettling but not horrific.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a1",43],"Question", {q:"Would you infer from ‘Some soups are warm.’ that 'Some but not all soups are warm'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some soups are warm.’ that 'Some soups are warm but not hot. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some soups are warm.’ that 'No soup is hot.'?",as: [['s','Yes'],['k','No']]},
@@ -754,11 +754,11 @@ var items = [
 [["IMPLICATURES-a3",43], "Question", {q:"Would you infer from ‘It is possible that the soups are warm.’ that 'It is possible but not certain that the soups are warm.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the soups are warm.’ that 'It is possible that the soups are warm but not hot?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the soups are warm.’ that 'It is certain that the soups are not hot.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the soups are warm.’ that 'It is possible but not certain that the soups are warm but not hot.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the soups are warm.’ that 'It is possible but not certain that the soups are warm but not hot.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a3",43], "Question", {q:"Would you infer from ‘It is possible that the days are warm.’ that 'It is possible but not certain that the days are warm.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the days are warm.’ that 'It is possible that the days are warm but not hot?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the days are warm.’ that 'It is certain that the days are not hot.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the days are warm.’ that 'It is possible but not certain that the days are warm but not hot.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the days are warm.’ that 'It is possible but not certain that the days are warm but not hot.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a1",44],"Question", {q:"Would you infer from ‘Some dogs are wary.’ that 'Some but not all dogs are wary'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dogs are wary.’ that 'Some dogs are wary but not cautious. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some dogs are wary.’ that 'No dog is cautious.'?",as: [['s','Yes'],['k','No']]},
@@ -770,14 +770,14 @@ var items = [
 [["IMPLICATURES-a3",44], "Question", {q:"Would you infer from ‘It is possible that the dogs are wary.’ that 'It is possible but not certain that the dogs are wary.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the dogs are wary.’ that 'It is possible that the dogs are wary but not cautious?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the dogs are wary.’ that 'It is certain that the dogs are not cautious.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the dogs are wary.’ that 'It is possible but not certain that the dogs are wary but not cautious.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the dogs are wary.’ that 'It is possible but not certain that the dogs are wary but not cautious.'?",as: [['s','Yes'],['k','No']]}],    
 [["IMPLICATURES-a4",44], "Question", {q:"Would you infer from ‘It is possible that the victims are wary.’ that 'It is possible but not certain that the victims are wary.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the victims are wary.’ that 'It is possible that the victims are wary but not cautious?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from ‘It is possible that the victims are wary.’ that 'It is certain that the victims are not cautious.'?",as: [['s','Yes'],['k','No']]},
-                          "Question", {q:"Would you infer from ‘It is possible that the victims are wary.’ that 'It is possible but not certain that the victims are wary but not cautious.'?",as: [['s','Yes'],['k','No']]}],	
+                          "Question", {q:"Would you infer from ‘It is possible that the victims are wary.’ that 'It is possible but not certain that the victims are wary but not cautious.'?",as: [['s','Yes'],['k','No']]}],    
     
     //// Fillers
-	 
+     
 [["filler-some",45], "Question", {q:"Would you infer from ‘Some tables are clean.’ that 'Some but not all tables are clean'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some tables are clean.’ that 'Some tables are clean but not dirty. '?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some tables are clean.’ that 'No painting is dirty.'?",as: [['s','Yes'],['k','No']]},
@@ -807,14 +807,12 @@ var items = [
                        "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'No street is narrow.'?",as: [['s','Yes'],['k','No']]},
                        "Question", {q:"Would you infer from ‘Some streets are wide.’ that 'Some but not all streets are wide but not narrow.'?",as: [['s','Yes'],['k','No']]}],
 
-	 
+     
 
-["hiddenCompletionCode", "FlashSentence", {s: String(completionCode), timeout: 1, sentenceDescType: "literal"}] 
+["hiddenCompletionCode", "FlashSentence", {s: String(completionCode), timeout: 1, sentenceDescType: "literal"}]
 
 
     ]   
-
-
 
 
 
