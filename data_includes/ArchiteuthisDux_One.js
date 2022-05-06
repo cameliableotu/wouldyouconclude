@@ -89,8 +89,7 @@ var items = [
 // Shared experimental items + fillers
   
 
-[["IMPLICATURES-a1",1],    "Question", {q: "<p>Mary: Some meals are adequate.</p><p>Would you conclude from this that, according to Mary, some but not all meals are adequate.'?</p>",
-        as: [['s','Yes'],['k','No']]},
+[["IMPLICATURES-a1",1],     "Question", {q:"Would you infer from 'Some meals are adequate.' that 'Some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from 'Some meals are adequate.' that 'Some meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from 'Some meals are adequate.' that 'No meal is good.'?",as: [['s','Yes'],['k','No']]},
                           "Question", {q:"Would you infer from 'Some meals are adequate.'that 'Some but not all meals are adequate but not good.'?",as: [['s','Yes'],['k','No']]}],
